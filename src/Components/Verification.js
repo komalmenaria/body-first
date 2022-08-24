@@ -1,37 +1,39 @@
-import React , {useState} from "react";
+import React , {useState,useEffect} from "react";
 import signimg from "../Images/signin-side-image.svg";
 import { useNavigate  } from "react-router";
-
-
-
-function Verification({user_phone}) {
-
+import { useAlert } from 'react-alert'
+import { useSelector,useDispatch } from "react-redux";
+import { verifyOtp } from "../actions/loginAction";
+function Verification() {
+  const alert = useAlert()
+  let loginData=useSelector(state=>state.loginData)
+  let {loading,error,user_phone} =loginData
+  const dispatch=useDispatch()
+  
   const [user_otp, setUser_otp] = useState("")
    const navigation = useNavigate();
 
+
  async function verifyOTP(e){
-    e.preventDefault()
-  // let user_phone = route.params.user_phone
-  let item = {user_phone ,user_otp}
-  console.log(item)
-  
-
- let result = await fetch('http://20.212.31.246:5000/api/user/verifyotp' ,{
-    method:'POST',
-    body:JSON.stringify(item),
-    headers:{
-      "Content-Type": 'application/json',
-      "Accept": 'application/json'
-    }
-  })
-
-  result = await result.json()
-  if (result.status === 200) {
-    navigation("/verification" );
-    console.log(result)
-  } else {
-    alert("Verification failed")
+  if(user_otp.length <4 || user_otp.length >4){
+    alert.error("otp Should be 4 digit Only")
+    return
   }
+  try {
+    e.preventDefault()
+    // let user_phone = route.params.user_phone
+    let item = {user_phone ,user_otp}
+    console.log(item)
+   
+   await dispatch(verifyOtp(item))
+   alert.success("Otp Verified")
+  } catch (error) {
+    console.log(error)
+    alert.error(error?.response?.data?.message|| "Server Error")
+  }
+
+
+ 
   
  }
 

@@ -25,7 +25,8 @@ const loginReducer = (state = intiialState, action) => {
                 loading:false,
                 user_name: action.payload.user_name,
                 is_privacy: action.payload.is_privacy,
-                user_phone: action.payload.user_phone
+                user_phone: action.payload.user_phone,
+                
             }
             case GET_OTP + "FAILED":
 
@@ -34,7 +35,27 @@ const loginReducer = (state = intiialState, action) => {
                     loading:false,
                     error:action.payload
                 }
-    
+                case VERIFY_OTP + "REQUEST":
+
+                    return {
+                        ...state,
+                        loading: true
+                    }
+                case VERIFY_OTP + "SUCCESS":
+        
+                    return {
+                        ...state,
+                        loading:false,
+                       user:action.payload,
+                        
+                    }
+                    case VERIFY_OTP + "FAILED":
+        
+                        return {
+                            ...state,
+                            loading:false,
+                            error:action.payload
+                        }
         default:
             return state
     }
