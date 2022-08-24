@@ -4,4 +4,4 @@ services:
     body-first:
         image: body-first
         ports:
-            - "81:81"
+            - "81:80"
