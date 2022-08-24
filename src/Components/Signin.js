@@ -1,10 +1,18 @@
-import React , {useState} from "react";
+import React , {useState,useEffect} from "react";
 import signimg from "../Images/signin-side-image.svg";
 import { useNavigate ,} from "react-router";
- 
-
-
+import { useSelector,useDispatch } from "react-redux";
+import Config from "../Config";
+import { getOtp } from "../actions/loginAction";
 function Signin() {
+   let loginData=useSelector(state=>state.loginData)
+  let {loading,user,error} =loginData
+  const dispatch=useDispatch()
+  useEffect(() => {
+    if(user){
+      navigation("/verification")
+    }
+  }, [user]);
   const [user_name, setUser_name] = useState("")
   const [user_phone, setUser_phone] = useState("")
   const [is_privacy, setIs_privacy] = useState(0)
@@ -19,31 +27,13 @@ function Signin() {
     item.is_privacy=1
   }else {
     item.is_privacy=0
-  }
- let result = await fetch('http://20.212.31.246:5000/api/user/getotp' ,{
-    method:'POST',
-    body:JSON.stringify(item),
-    headers:{
-      "Content-Type": 'application/json',
-      "Accept": 'application/json'
-    }
-  }) 
+  } 
   
-
-  result = await result.json()
-
-
- 
-    if (result.status === 200) {
-      navigation("/verification" ,{ user_phone : result.user_phone } );
-      console.log(result)
-    } else {
-      alert("Something is wrong")
-    }
+  
  }
 
  
-
+//  
   return (
     <>
       <div className="signin">
