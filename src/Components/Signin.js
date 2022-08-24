@@ -1,10 +1,20 @@
-import React , {useState} from "react";
+import React , {useState,useEffect} from "react";
 import signimg from "../Images/signin-side-image.svg";
 import { useNavigate ,} from "react-router";
- 
+import { useSelector,useDispatch } from "react-redux";
 
-
+import { useAlert } from 'react-alert'
+import { getOtp } from "../actions/loginAction";
 function Signin() {
+   let loginData=useSelector(state=>state.loginData)
+  let {loading,get_otp_sucees,error} =loginData
+  const dispatch=useDispatch()
+  const alert = useAlert()
+  useEffect(() => {
+    if(get_otp_sucees){
+      navigation("/verification")
+    }
+  }, [get_otp_sucees,dispatch]);
   const [user_name, setUser_name] = useState("")
   const [user_phone, setUser_phone] = useState("")
   const [is_privacy, setIs_privacy] = useState(0)
@@ -12,38 +22,31 @@ function Signin() {
   const navigation = useNavigate();
 
  async function getOTP(){
-    // e.preventDefault()
-  let  item  = {user_name , user_phone } 
-  console.log(item)
-  if(is_privacy){
-    item.is_privacy=1
-  }else {
-    item.is_privacy=0
+  if(user_phone.length <10 || user_phone.length >10){
+    alert.error("Mobile Number Should be 10 digit Only")
+    return
   }
- let result = await fetch('http://20.212.31.246:5000/api/user/getotp' ,{
-    method:'POST',
-    body:JSON.stringify(item),
-    headers:{
-      "Content-Type": 'application/json',
-      "Accept": 'application/json'
-    }
-  }) 
-  
+  try {
+    let  item  = {user_name , user_phone } 
+    if(is_privacy){
+      item.is_privacy=1
+    }else {
+      item.is_privacy=0
+    } 
+     
+    await dispatch(getOtp(item))
+    alert.success("Otp sent SuccessFull")
+    navigation('/verification')
+  } catch (error) {
+      console.log(error)
+      alert.error(error?.response?.data?.message|| "Server Error")
+  }
+    
 
-  result = await result.json()
-
-
- 
-    if (result.status === 200) {
-      navigation("/verification" ,{ user_phone : result.user_phone } );
-      console.log(result)
-    } else {
-      alert("Something is wrong")
-    }
  }
 
  
-
+//  
   return (
     <>
       <div className="signin">
