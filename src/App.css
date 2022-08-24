@@ -54,10 +54,11 @@ a{text-decoration: none;}
 }
 .home > video{
   position: absolute;
-  bottom: 0;
-  /* right: 0; */
+  top:4 ;
+
   z-index: -1;
-  width: 100vw;
+  width: 100%;
+
 }
 
 .explore-body-first{
@@ -479,6 +480,75 @@ color: rgb(0, 0, 0);
 /* end subcategories page  */
 
 
+/* products page */
+.products{
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(129.58deg, rgba(0, 0, 0, 0.5246) 3.28%, rgba(255, 255, 255, 0.86) 52.55%), #FFFFFF;
+}
+
+.products > .all-products{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.single-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  margin: 50px;
+border-radius: 15px;
+box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+transition: all 0.2s ease-in-out;
+
+}
+
+.single-product:hover{
+  box-shadow: 0px 0px 15px 10px #469D38;
+cursor: pointer;
+}
+
+.single-product > img{
+  width: 100px;
+  margin-bottom: 10px;
+}
+.single-product > span , .single-product > p{
+  font-family: 'Port Lligat Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+}
+.addtocart{
+  width: 50px;
+  margin-top: 50px;
+ margin-left: -60px;
+}
+.products > .product-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.products > .product-buttons > .button-btn{
+  background: #469D38;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 5px 20px;
+  border: none;
+  font-weight: bold;
+}
+
+
+/* products page */
 
 
 

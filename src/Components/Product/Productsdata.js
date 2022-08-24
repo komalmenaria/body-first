@@ -1,52 +1,52 @@
-import img1 from "./Category/Hair-skin-nail.png"
-import img2 from "./Category/Weight-Managment.png"
-import img3 from "./Category/Heart -Health.png"
-import img4 from "./Category/Stress-Managment.png"
-import img5 from "./Category/Energy-Performance.png"
-import img6 from "./Category/Brain-Nerve-Health.png"
+import img1 from "./Productsimg/product1.png"
+import img2 from "./Productsimg/product2.png"
+import img3 from "./Productsimg/product3.png"
+import img4 from "./Productsimg/product4.png"
+import img5 from "./Productsimg/product1.png"
+import img6 from "./Productsimg/product2.png"
 
 
 
-const data = {
-    productata:[
+const Productsdata = {
+     data:[
         {
             id:1,
-            Image:img1,
+            image:img1,
             name:"Eye Health-Lutein Zeaxanthin",
             price:4000
             
         },
         {
             id:2,
-            Image:img2,
+            image:img2,
             name:"Quercetin Advance-Licorice",
             price:3999
             
         },
         {
             id:3,
-            Image:img3,
+            image:img3,
             name:"Fenugreek Fibre-Fenugreek",
             price:2000
             
         },
         {
             id:4,
-            Image:img4,
+            image:img4,
             name:"Super Gainz",
             price:1999
             
         },
         {
             id:5,
-            Image:img5,
+            image:img5,
             name:"Super Gainz",
             price:555
             
         },
         {
             id:6,
-            Image:img6,
+            image:img6,
             name:"Eye Health-Lutein Zeaxanthin",
             price:400
             
@@ -54,4 +54,4 @@ const data = {
     ]
 }
 
-export default data;
+export default Productsdata;

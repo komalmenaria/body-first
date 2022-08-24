@@ -1,6 +1,6 @@
 import React , {useState,useEffect} from "react";
 import signimg from "../Images/signin-side-image.svg";
-import { useNavigate ,} from "react-router";
+import { useNavigate} from "react-router";
 import { useSelector,useDispatch } from "react-redux";
 
 import { useAlert } from 'react-alert'

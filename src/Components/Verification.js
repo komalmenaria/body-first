@@ -14,20 +14,18 @@ function Verification() {
    const navigation = useNavigate();
 
 
- async function verifyOTP(e){
+ async function verifyOTP(){
   if(user_otp.length <4 || user_otp.length >4){
     alert.error("otp Should be 4 digit Only")
     return
   }
   try {
-    e.preventDefault()
-    // let user_phone = route.params.user_phone
     let item = {user_phone ,user_otp}
     console.log(item)
    
    await dispatch(verifyOtp(item))
    alert.success("Otp Verified")
-    navigation('/')
+    navigation('/Genderage')
   } catch (error) {
     console.log(error)
     alert.error(error?.response?.data?.message|| "Server Error")

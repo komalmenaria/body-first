@@ -11,7 +11,7 @@ import Genderage from './Genderage';
 import Categories from './Category/Categories';
 import Subcategories from './Category/Subcategories';
 import Form from './MultiStepForm/Form';
-import Products from './Product/Products'
+import Products from './Product/Products.js'
 
 
 
