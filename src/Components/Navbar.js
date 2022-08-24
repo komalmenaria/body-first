@@ -32,6 +32,12 @@ function Navbar() {
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/subcategories">Sub Categories</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/form">Form</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/products">Products</Link>
+        </li>
       </ul>
     </div>
   </div>

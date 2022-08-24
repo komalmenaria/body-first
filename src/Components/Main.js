@@ -10,8 +10,8 @@ import Navbar from './Navbar';
 import Genderage from './Genderage';
 import Categories from './Category/Categories';
 import Subcategories from './Category/Subcategories';
-
-
+import Form from './MultiStepForm/Form';
+import Products from './Product/Products'
 
 
 
@@ -27,6 +27,9 @@ function Main() {
           <Route exact path="/Genderage" element={<Genderage />} />
           <Route exact path="/categories" element={<Categories />} />
           <Route exact path="/subcategories" element={<Subcategories />} />
+          <Route exact path="/form" element={<Form />} />
+          <Route exact path="/products" element={<Products />} />
+
 
 
         </Routes>
