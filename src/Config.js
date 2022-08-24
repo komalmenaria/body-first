@@ -2,7 +2,7 @@
 
 module.exports = Object.freeze({
 
-     BASE_URL:"http://127.0.0.1:5001/api/",
+     BASE_URL:"http://20.212.31.246:5000/api/",
      GET_OTP:"user/getotp",
      VERIFY_OTP:"user/verifyotp",
      ASSIGN_AGE_AND_GENDER:"user/assignageandgender",
