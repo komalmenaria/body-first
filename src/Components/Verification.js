@@ -27,6 +27,7 @@ function Verification() {
    
    await dispatch(verifyOtp(item))
    alert.success("Otp Verified")
+    navigation('/')
   } catch (error) {
     console.log(error)
     alert.error(error?.response?.data?.message|| "Server Error")
