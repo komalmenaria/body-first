@@ -12,6 +12,8 @@ import Categories from './Category/Categories';
 import Subcategories from './Category/Subcategories';
 import Form from './MultiStepForm/Form';
 import Products from './Product/Products.js'
+import Wishlist from './Wishlist';
+import Coupon from './Coupon';
 
 
 
@@ -29,6 +31,8 @@ function Main() {
           <Route exact path="/subcategories" element={<Subcategories />} />
           <Route exact path="/form" element={<Form />} />
           <Route exact path="/products" element={<Products />} />
+          <Route exact path="/wishlist" element={<Wishlist />} />
+          <Route exact path="/coupon" element={<Coupon />} />
 
 
 

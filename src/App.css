@@ -505,7 +505,7 @@ color: rgb(0, 0, 0);
   background-color: #fff;
   width: 250px;
   height: 250px;
-  margin: 50px;
+  margin: 15px 50px;
 border-radius: 15px;
 box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 transition: all 0.2s ease-in-out;
@@ -530,27 +530,74 @@ line-height: 24px;
 }
 .addtocart{
   width: 50px;
-  margin-top: 50px;
+  margin-top: 60px;
  margin-left: -60px;
 }
-.products > .product-buttons{
+.addedtocart{
+  width: 30px;
+  margin-bottom: -20px;
+ margin-left: -60px;
+}
+.check-uncheck{
+  width: 30px;
+  margin-bottom: -20px;
+ margin-right: -50px;
+}
+.product-buttons{
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.products > .product-buttons > .button-btn{
+ .product-buttons > .button-btn{
   background: #469D38;
   color: #FFFFFF;
   border-radius: 10px;
   padding: 5px 20px;
   border: none;
   font-weight: bold;
+  border: 2px solid #fff;
+transition: all 0.2 ease-in-out;
 }
 
+.product-buttons > .button-btn:hover{
+  background: #fff;
+  color: #469D38;
+  border: 2px solid #469D38;
+
+}
 
 /* products page */
 
+/* coupan page */
+.coupon-page{
+  width: 100%;
+  padding: 9.7rem 0;
+  background: linear-gradient(323.55deg, rgba(50, 174, 30, 0.48) 3.87%, rgba(255, 255, 255, 0) 97.62%), #FFFFFF;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+justify-content: center;
 
+}
+
+.coupon{
+  background: #fff;
+  width: 40vw;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow:4px 4px 20px 10px rgba(49, 197, 26, 0.86);
+  margin: 50px;
+}
+
+
+.coupon-page > .product-buttons > button{
+  margin: 0 60px ;
+}
+/* coupan page */
 
 /* End Desktop   */
 

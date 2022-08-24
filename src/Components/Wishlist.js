@@ -1,8 +1,15 @@
 import React from 'react'
-import Productsdata from "./Productsdata"
-import Singleproduct from './Singleproduct';
+import Productsdata from "./Product/Productsdata"
+import Singlewishlistitem  from './Singlewishlistitem';
+import { useNavigate } from 'react-router-dom';
 
-function Products() {
+
+
+function Wishlist() {
+    const navigation = useNavigate();
+    function generateCoupan(){
+navigation('/coupon')
+    }
   return (
     <>
     <div className="products">
@@ -10,7 +17,7 @@ function Products() {
             <div className="all-products">
             {Productsdata.data.map((item, index) => {
               return (
-                <Singleproduct
+                <Singlewishlistitem
                   key={index}
                   prodname={item.name}
                   prodimg={item.image}
@@ -20,8 +27,8 @@ function Products() {
             })}
             </div>
             <div className="product-buttons">
-      <button type='button' className='button-btn'>Back to Categories</button>
-      <button type='button' className='button-btn'>Add All In Carts</button>
+      <button type='button' className='button-btn'>Back to Products</button>
+      <button type='button' className='button-btn' onClick={generateCoupan}>Get Coupon</button>
 
     </div>
     </div>
@@ -30,4 +37,4 @@ function Products() {
   )
 }
 
-export default Products
+export default Wishlist;
