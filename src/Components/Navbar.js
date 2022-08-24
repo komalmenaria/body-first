@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 function Navbar() {
   return (
     <>
-    <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
+    <nav className="navbar navbar-dark navbar-expand-lg bg-dark body-first-navbar">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">Navbar</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,13 @@ function Navbar() {
           <Link className="nav-link active" aria-current="page" to="/verification">Verification</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/explore">Explore</Link>
+          <Link className="nav-link active" aria-current="page" to="/Genderage">Explore</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/categories">Categories</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/subcategories">Sub Categories</Link>
         </li>
       </ul>
     </div>
