@@ -7,19 +7,20 @@ import { useAlert } from 'react-alert'
 import { getOtp } from "../actions/loginAction";
 function Signin() {
    let loginData=useSelector(state=>state.loginData)
-  let {loading,get_otp_sucees,error} =loginData
+  let {get_otp_sucees} =loginData
+  const navigation = useNavigate();
   const dispatch=useDispatch()
   const alert = useAlert()
   useEffect(() => {
     if(get_otp_sucees){
       navigation("/verification")
     }
-  }, [get_otp_sucees,dispatch]);
+  }, [get_otp_sucees,dispatch,navigation]);
   const [user_name, setUser_name] = useState("")
   const [user_phone, setUser_phone] = useState("")
   const [is_privacy, setIs_privacy] = useState(0)
 
-  const navigation = useNavigate();
+ 
 
  async function getOTP(){
   if(user_phone.length <10 || user_phone.length >10){

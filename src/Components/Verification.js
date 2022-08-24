@@ -1,4 +1,4 @@
-import React , {useState,useEffect} from "react";
+import React , {useState} from "react";
 import signimg from "../Images/signin-side-image.svg";
 import { useNavigate  } from "react-router";
 import { useAlert } from 'react-alert'
@@ -7,7 +7,7 @@ import { verifyOtp } from "../actions/loginAction";
 function Verification() {
   const alert = useAlert()
   let loginData=useSelector(state=>state.loginData)
-  let {loading,error,user_phone} =loginData
+  let {user_phone} =loginData
   const dispatch=useDispatch()
   
   const [user_otp, setUser_otp] = useState("")
