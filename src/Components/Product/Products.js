@@ -1,8 +1,13 @@
 import React from 'react'
 import Productsdata from "./Productsdata"
 import Singleproduct from './Singleproduct';
+import { useNavigate } from 'react-router-dom';
 
 function Products() {
+  const navigation = useNavigate();
+  function backtoCategories(){
+    navigation('/categories')
+  }
   return (
     <>
     <div className="products">
@@ -20,7 +25,7 @@ function Products() {
             })}
             </div>
             <div className="product-buttons">
-      <button type='button' className='button-btn'>Back to Categories</button>
+      <button type='button' className='button-btn' onClick={backtoCategories} >Back to Categories</button>
       <button type='button' className='button-btn'>Add All In Carts</button>
 
     </div>

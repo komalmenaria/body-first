@@ -5,10 +5,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Wishlist() {
+function Cart() {
     const navigation = useNavigate();
     function generateCoupan(){
 navigation('/coupon')
+    }
+    function backtoproducts(){
+      navigation('/products')
     }
   return (
     <>
@@ -27,7 +30,7 @@ navigation('/coupon')
             })}
             </div>
             <div className="product-buttons">
-      <button type='button' className='button-btn'>Back to Products</button>
+      <button type='button' className='button-btn' onClick={backtoproducts}>Back to Products</button>
       <button type='button' className='button-btn' onClick={generateCoupan}>Get Coupon</button>
 
     </div>
@@ -37,4 +40,4 @@ navigation('/coupon')
   )
 }
 
-export default Wishlist;
+export default Cart;

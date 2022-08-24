@@ -30,7 +30,7 @@ function Navbar() {
           <Link className="nav-link active" aria-current="page" to="/products">Products</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/wishlist">Wishlist</Link>
+          <Link className="nav-link active" aria-current="page" to="/cart">Cart</Link>
         </li>
       </ul>
     </div>
