@@ -14,6 +14,7 @@ import Form from './MultiStepForm/Form';
 import Products from './Product/Products.js'
 import Cart from './Cart';
 import Coupon from './Coupon';
+import Catdesc from './Catdesc';
 
 
 
@@ -33,6 +34,7 @@ function Main() {
           <Route exact path="/products" element={<Products />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/coupon" element={<Coupon />} />
+          <Route exact path="/catdesc" element={<Catdesc />} />
 
 
 
