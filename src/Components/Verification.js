@@ -38,10 +38,10 @@ function Verification() {
 
   return (
     <>
-      <div className="signin">
-        <div action="blank" className="signin-form">
+      <div className="verification">
+        <div action="blank" className="verification-form">
           <h1>VERIFICATION</h1>
-          <input type="text" name="otp" placeholder="Enter OTP"  className="sign-input otp" required value={user_otp} onChange={(e)=>setUser_otp(e.target.value)}/>
+          <input type="text" name="otp" placeholder="Enter OTP"  className="verify-input otp" required value={user_otp} onChange={(e)=>setUser_otp(e.target.value)}/>
          <p>You will get otp on your mobile number </p>
          <button className='from-button' onClick={verifyOTP} >Verify</button>
         </div>
