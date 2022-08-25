@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .App {
   text-align: center;
 }
@@ -342,7 +343,7 @@ a {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 32px;
   color: rgba(0, 0, 0, 0.5);
   transition: all 100ms linear;
@@ -365,9 +366,9 @@ a {
 .gender-age-submit-btn {
   margin-top: 30px;
   background: #469d38;
-  padding: 10px 40px;
+  padding: 5px 40px;
   border: 2px solid #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -471,6 +472,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 5px 5px 10px 10px #ffffff;
 }
 
 .all-sub-categories {
@@ -562,8 +564,8 @@ a {
 .single-product > p {
   font-family: "Port Lligat Slab";
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 800;
+  font-size: 15px;
   line-height: 24px;
 }
 .addtocart {
@@ -604,6 +606,37 @@ a {
 }
 
 /* products page */
+
+
+/* category description page */
+.Catdes-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  width: 100%;
+height: auto;
+background: linear-gradient(166.73deg, rgba(0, 0, 0, 0.8924) 11.75%, rgba(49, 197, 26, 0.8924) 90.46%);
+}
+.Catdes-section > img{
+  width: 100%;
+ 
+}
+.Catdes-section > p{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+color: #FFFFFF;
+padding: 10px 60px;
+}
+
+/* end category description page */
+
+
+
 
 /* coupan page */
 .coupon-page {
@@ -876,4 +909,17 @@ a {
   .gender-age-selection{
     height: 88vh
   }
+}
+
+*{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
+
+.multistep-form{
+  background: url("./Images/form-background.svg");
+  position: fixed;
+  width: 100%;
+  height: auto;
 }

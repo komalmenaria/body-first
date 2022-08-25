@@ -21,6 +21,7 @@ function Genderage() {
         alert.error("Plase select Gender")
         return
       }
+      
       switch (age) {
         case "<18":
           from_age = 18
@@ -98,7 +99,7 @@ function Genderage() {
             </fieldset>
 
           </div>
-          <button type='submit' className='gender-age-submit-btn'  >NEXT</button>
+          <button type='submit' className='gender-age-submit-btn'  >Next</button>
         </form>
       </div>
     </>
