@@ -797,9 +797,9 @@ padding: 10px 60px;
  
   .gender > span {
     
-    font-size: 26px;
+    font-size: 23px;
     line-height: 37px;
-    padding: 7px 30px;
+    padding: 7px 15px;
     margin-top: 62px;
 }
 .gender > .select-gender > .single-gender {
@@ -807,15 +807,16 @@ padding: 10px 60px;
   height: 100px;}
 
   .age-group > span {
-    font-size: 35px;
-    line-height: 54px;}
+    font-size: 25px;
+    line-height: 65px;
+}
     .select-age-group {
       width: 327px;
       
   }
   .select-age-group > .select-age {
     padding: 5px 7px;
-    font-size: 24px;
+    font-size: 17px;
     line-height: 25px;
     margin: 5px 13px;
 }
