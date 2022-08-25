@@ -44,7 +44,10 @@ a{text-decoration: none;}
 /* Desktop   */
 
 /* navbar */
-
+.main-logo > img{
+  width: 100px !important; 
+  padding: -10px;
+}
 
 /*home*/
 .home{
