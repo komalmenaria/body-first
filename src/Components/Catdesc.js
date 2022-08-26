@@ -44,14 +44,15 @@ function Catdesc() {
               alt=""
             />
           </div>
-
-          <div className="product-promotion">
+        </div>
+        <div className="product-promotion ">
           <LazyLoadImage
             effect="blur"
-            className="product-promotion-img"
+            className=" desc-product-image"
             src={promot}
             alt=""
           />
+
           <div className="promote-it">
             <p>50+</p>
             <span>Product</span>
@@ -65,8 +66,6 @@ function Catdesc() {
             <span>Positive feedback</span>
           </div>
         </div>
-        </div>
-        
       </div>
     </>
   );

@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .App {
   text-align: center;
 }
@@ -33,6 +35,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -45,7 +48,7 @@ a {
 /* Desktop   */
 
 /* navbar */
-.main-logo > img {
+.main-logo>img {
   width: 100px !important;
   padding: -10px;
 }
@@ -56,7 +59,8 @@ a {
   align-items: center;
   justify-content: center;
 }
-.home > video {
+
+.home>video {
   position: fixed;
   z-index: -1;
   width: 100%;
@@ -82,6 +86,7 @@ a {
   border: 4px solid rgba(49, 197, 26, 0.86);
   background-color: #fff;
 }
+
 /* end home*/
 
 /*  SignIn */
@@ -95,14 +100,15 @@ a {
   background-size: cover;
   width: 100%;
   border: 20px solid #469d38;
- padding: 4vh 20px;
+  padding: 4vh 20px;
 }
 
 .signin-form {
   display: flex;
   flex-direction: column;
 }
-.signin-form > h1 {
+
+.signin-form>h1 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -122,6 +128,7 @@ a {
   /* margin-right: 30px; */
   text-transform: capitalize;
 }
+
 .username {
   background: url(./Images/User-name-input.svg) #fff;
   object-fit: cover;
@@ -129,6 +136,7 @@ a {
   background-size: contain;
   margin: 10px 0;
 }
+
 .userphone {
   background: url(./Images/User-phone-input.svg) #fff;
   background-repeat: no-repeat;
@@ -143,20 +151,24 @@ a {
   background-size: contain;
   margin: 10px 0;
 }
-.signin > img {
+
+.signin>img {
   width: 30%;
 }
+
 .check-privacy-label {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   margin: 10px 0;
 }
-.check-privacy-label > .checkbox {
+
+.check-privacy-label>.checkbox {
   margin-right: 5px;
   margin-top: 2px;
 }
-.check-privacy-label > p {
+
+.check-privacy-label>p {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -164,7 +176,8 @@ a {
   line-height: 20px;
   color: #ffffff;
 }
-.check-privacy-label > p > span {
+
+.check-privacy-label>p>span {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -189,6 +202,7 @@ a {
   width: 50%;
   transition: all 0.2s ease-in-out;
 }
+
 .from-button:hover {
   background: #fff;
   color: #469d38;
@@ -207,7 +221,7 @@ a {
   object-fit: cover;
   background-size: cover;
   width: 100%;
-  padding:5vh 20px;
+  padding: 5vh 20px;
   border: 20px solid #469d38;
 }
 
@@ -215,7 +229,8 @@ a {
   display: flex;
   flex-direction: column;
 }
-.verification-form > h1 {
+
+.verification-form>h1 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -235,30 +250,35 @@ a {
   margin-right: 30px;
   text-transform: capitalize;
 }
-.verification > img {
+
+.verification>img {
   width: 30%;
 }
-.verification-form > p{
+
+.verification-form>p {
   color: #fff;
 }
+
 /*end verification*/
 /* gender and age selection page  */
 .gender-age-selection {
-  background: url("./Images/Gender_page_bg.png");
+  background: radial-gradient(40.65% 40.65% at 47.4% 46.42%, #469D38 0%, #000000 100%);
   background-repeat: no-repeat;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 30px 0;
   border: 20px solid #469d38;
-  
+
 }
+
 .gender-age-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .gender-age-selection,
 .gender {
   display: flex;
@@ -266,27 +286,30 @@ a {
   align-items: center;
   justify-content: center;
 }
-.gender > .select-gender > .single-gender {
+
+.gender>.select-gender>.single-gender {
   width: 150px;
   height: 150px;
   margin: 5px 20px;
 }
-.gender > .select-gender > .male-gender {
+
+.gender>.select-gender>.male-gender {
   content: url(./Images/male.png);
 }
 
-.gender > .select-gender > .male-gender:checked {
+.gender>.select-gender>.male-gender:checked {
   content: url(./Images/gender-male-hover.png);
 }
-.gender > .select-gender > .female-gender {
+
+.gender>.select-gender>.female-gender {
   content: url(./Images/female.png);
 }
 
-.gender > .select-gender > .female-gender:checked {
+.gender>.select-gender>.female-gender:checked {
   content: url(./Images/gender-female-hover.png);
 }
 
-.gender > span {
+.gender>span {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -298,7 +321,7 @@ a {
   padding: 7px 40px;
 }
 
-.gender > .select-gender {
+.gender>.select-gender {
   margin-top: 30px;
 }
 
@@ -309,7 +332,8 @@ a {
   align-items: center;
   margin: 20px 0;
 }
-.age-group > span {
+
+.age-group>span {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -317,6 +341,7 @@ a {
   line-height: 96px;
   color: #ffffff;
 }
+
 .select-age-group {
   display: flex;
   flex-wrap: wrap;
@@ -325,7 +350,7 @@ a {
   width: 500px;
 }
 
-.select-age-group > .select-age {
+.select-age-group>.select-age {
   width: auto;
   height: 100%;
   -webkit-appearance: none;
@@ -347,13 +372,14 @@ a {
   border: 1px solid rgb(104, 104, 104);
 }
 
-.select-age-group > .select-age:before {
+.select-age-group>.select-age:before {
   content: attr(label);
   display: inline-block;
   text-align: center;
   width: 100%;
 }
-.select-age-group > .select-age:checked {
+
+.select-age-group>.select-age:checked {
   background: #469d38;
   color: #ffffff;
   border: 1px solid #fff;
@@ -372,6 +398,7 @@ a {
   line-height: 36px;
   color: #ffffff;
 }
+
 .gender-age-submit-btn:hover {
   background: #fff;
   color: #469d38;
@@ -382,11 +409,9 @@ a {
 /* categories page  */
 
 .categories-section {
-  background: linear-gradient(
-    145.76deg,
-    #000000 43.44%,
-    rgba(49, 197, 26, 0.68) 67.15%
-  );
+  background: linear-gradient(145.76deg,
+      #000000 43.44%,
+      rgba(49, 197, 26, 0.68) 67.15%);
   background-repeat: no-repeat;
   width: 100%;
   display: flex;
@@ -395,19 +420,21 @@ a {
   border: 20px solid #469d38;
   align-items: center;
   justify-content: center;
-  
+
 }
 
-.categories-section > h1 {
+.categories-section>h1 {
   color: #fff;
 }
-.categories-section > .categories {
+
+.categories-section>.categories {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 50px 170px;
 }
+
 .single-category {
   /* position: absolute; */
 
@@ -431,19 +458,22 @@ a {
   color: #000000;
   transition: all 0.2s ease-in-out;
 }
+
 .single-category:hover {
   background: #36fa16;
   box-shadow: 4px 4px 14px 17px #36fa16;
   color: #fff;
 }
 
-.single-category > img {
+.single-category>img {
   /* width: 100%; */
   object-fit: cover;
 }
-.single-category > span {
+
+.single-category>span {
   padding: 5px;
 }
+
 /* end categories page  */
 
 /* subcategories page  */
@@ -460,7 +490,7 @@ a {
 
 }
 
-.subcategories-section > .subcategories {
+.subcategories-section>.subcategories {
   padding: 20px 0;
   background-color: #fff;
   display: flex;
@@ -475,6 +505,7 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
+
 .subcategory-single {
   margin: 30px;
   background: #ffffff;
@@ -503,13 +534,15 @@ a {
   color: rgb(0, 0, 0);
 }
 
-.subcategory-single > img {
+.subcategory-single>img {
   width: 60%;
   object-fit: cover;
 }
-.subcategory-single > span {
+
+.subcategory-single>span {
   padding: 5px;
 }
+
 /* end subcategories page  */
 
 /* products page */
@@ -518,15 +551,13 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-      129.58deg,
+  background: linear-gradient(129.58deg,
       rgba(0, 0, 0, 0.5246) 3.28%,
-      rgba(255, 255, 255, 0.86) 52.55%
-    ),
+      rgba(255, 255, 255, 0.86) 52.55%),
     #ffffff;
 }
 
-.products > .all-products {
+.products>.all-products {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -552,39 +583,45 @@ a {
   cursor: pointer;
 }
 
-.single-product > img {
+.single-product>img {
   width: 60px;
   margin-bottom: 10px;
 }
-.single-product > span,
-.single-product > p {
+
+.single-product>span,
+.single-product>p {
   font-family: "Port Lligat Slab";
   font-style: normal;
   font-weight: 800;
   font-size: 15px;
   line-height: 24px;
 }
+
 .addtocart {
   width: 50px;
   margin-top: 60px;
   margin-left: -60px;
 }
+
 .addedtocart {
   width: 30px;
   margin-bottom: -20px;
   margin-left: -60px;
 }
+
 .check-uncheck {
   width: 30px;
   margin-bottom: -20px;
   margin-right: -50px;
 }
+
 .product-buttons {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.product-buttons > .button-btn {
+
+.product-buttons>.button-btn {
   background: #469d38;
   color: #ffffff;
   border-radius: 10px;
@@ -595,7 +632,7 @@ a {
   transition: all 0.2 ease-in-out;
 }
 
-.product-buttons > .button-btn:hover {
+.product-buttons>.button-btn:hover {
   background: #fff;
   color: #469d38;
   border: 2px solid #469d38;
@@ -605,32 +642,36 @@ a {
 
 
 /* category description page */
-.Catdes-section{
+.Catdes-section {
   background: linear-gradient(90deg, #1B2E18 1.64%, #469D38 49.33%, #FFFFFF 49.64%);
   background-repeat: no-repeat;
- width: 100%;
- height: auto;
+  width: 100%;
+  height: auto;
 
 }
-.Catdes-section > .desc-products{
+
+.Catdes-section>.desc-products {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px;
 }
-.desc-content{
+
+.desc-content {
   background: #FFFFFF;
-box-shadow: inset 0px 4px 52px #000000;
-display: flex;
-align-items: center;
-flex-direction: column;
-padding: 40px;
-margin: 0 50px;
+  box-shadow: inset 0px 4px 52px #000000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  margin: 0 50px;
 }
-.desc-product-image{
+
+.desc-product-image {
   width: 100%;
   height: auto;
 }
+
 .desc-button {
   cursor: pointer;
   background: #469d38;
@@ -645,26 +686,56 @@ margin: 0 50px;
   padding: 5px 10%;
   transition: all 0.2s ease-in-out;
 }
+
 .desc-button:hover {
   background: #fff;
   color: #469d38;
 }
 
-.desc-text-poster{
+.desc-text-poster {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.desc-text-poster > p{
+
+.desc-text-poster>p {
   font-weight: bold;
- 
+  font-size: 20px;
+  margin-top: 20px;
 }
-.product-promotion{
+
+
+.product-promotion {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #000000;
+  background: #000000;
+  box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25);
+  padding: 0 10%;
+
 }
+
+.product-promotion>.promote-it {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 9px rgba(49, 197, 26, 0.86);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.product-promotion>.promote-it>span {
+  font-size: 20px;
+
+}
+
+.product-promotion>.product-promotion-img {
+  width: 100%;
+  height: auto;
+}
+
 /* end category description page */
 
 
@@ -674,11 +745,9 @@ margin: 0 50px;
 .coupon-page {
   width: 100%;
   padding: 9.7rem 0;
-  background: linear-gradient(
-      323.55deg,
+  background: linear-gradient(323.55deg,
       rgba(50, 174, 30, 0.48) 3.87%,
-      rgba(255, 255, 255, 0) 97.62%
-    ),
+      rgba(255, 255, 255, 0) 97.62%),
     #ffffff;
   display: flex;
   flex-direction: column;
@@ -702,9 +771,10 @@ margin: 0 50px;
   text-align: center;
 }
 
-.coupon-page > .product-buttons > button {
+.coupon-page>.product-buttons>button {
   margin: 0 60px;
 }
+
 /* coupan page */
 
 /* End Desktop   */
@@ -713,157 +783,178 @@ margin: 0 50px;
 
 
 @media (min-aspect-ratio: 16/9) {
-  .home > video {
-    width: 100%;
-    height: auto;
-  } 
-  .signin{
+  .home>video {
     width: 100%;
     height: auto;
   }
-  .verification{
+
+  .signin {
     width: 100%;
     height: auto;
   }
-  .gender-age-selection{
+
+  .verification {
     width: 100%;
     height: auto;
   }
-  .coupon-page{
-    width:  100%;
+
+  .gender-age-selection {
+    width: 100%;
     height: auto;
   }
-  .subcategories-section{
-    width:  100%;
+
+  .coupon-page {
+    width: 100%;
+    height: auto;
+  }
+
+  .subcategories-section {
+    width: 100%;
     height: auto;
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
-  .home > video {
+  .home>video {
     width: auto;
     height: 100%;
   }
-  .signin{
+
+  .signin {
     width: 100%;
     height: 100%;
   }
-  .verification{
+
+  .verification {
     width: auto;
     height: 100%;
   }
-  .gender-age-selection{
+
+  .gender-age-selection {
     width: auto;
     height: 100%;
   }
-  .coupon-page{
+
+  .coupon-page {
     width: auto;
     height: 100%;
   }
-  .subcategories-section{
+
+  .subcategories-section {
 
     height: 100%;
   }
 }
 
-@media screen and (max-width:912px){
-  .signin {
-    height: 93%;
-  width: 100%;
 
-}
-}
+
 @media screen and (max-width:850px) {
-  .home{
+  .home {
     height: 90vh;
-  width: 100%;
+    width: 100%;
 
   }
 
 
 
-.categories-section > .categories{
-  padding: 50px 90px;
+  .categories-section>.categories {
+    padding: 50px 90px;
+  }
+
+  .product-buttons {
+    margin-top: 45px;
+  }
+
+  .subcategories-section {
+    padding: 21.3rem 7rem;
+  }
+
+  .gender-age-selection {
+    height: 91vh;
+  }
 }
-.product-buttons {
-  margin-top: 45px;
-}
-.subcategories-section {
-  padding: 21.3rem 7rem;
-}
-.gender-age-selection{
-  height: 91vh;
-}
-}
+
 @media screen and (max-width:450px) {
-  .home{
+  .home {
     height: auto;
-  } 
- 
-  .signin > img {
+  }
+
+  .signin>img {
     display: none;
   }
-  .from-button{
+
+  .from-button {
     width: 90%;
   }
+
   .signin {
 
-   padding: 11vh 20px;
+    padding: 11vh 20px;
   }
-  
-  .verification-form > h1{
+
+  .verification-form>h1 {
     font-size: 30px;
   }
-  .verification > img {
+
+  .verification>img {
     display: none;
   }
- 
-  .gender > span {
-    
+
+  .gender>span {
+
     font-size: 23px;
     line-height: 37px;
     padding: 7px 15px;
     margin-top: 62px;
-}
-.gender > .select-gender > .single-gender {
-  width: 100px;
-  height: 100px;}
+  }
 
-  .age-group > span {
+  .gender>.select-gender>.single-gender {
+    width: 100px;
+    height: 100px;
+  }
+
+  .age-group>span {
     font-size: 25px;
     line-height: 65px;
-}
-    .select-age-group {
-      width: 327px;
-      
   }
-  .select-age-group > .select-age {
+
+  .select-age-group {
+    width: 327px;
+
+  }
+
+  .select-age-group>.select-age {
     padding: 5px 7px;
     font-size: 17px;
     line-height: 25px;
     margin: 5px 13px;
-}
-.gender-age-submit-btn {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  padding: 2px 40px;
-  font-size: 23px;
-  line-height: 32px;
-}
-.coupon {
+  }
 
-  width: 80%;
-  margin: 31px;
-}
-.coupon-page > .product-buttons > button {
-  margin: 0 6px;
-}
-.categories-section > .categories {
-  padding: 50px 0px;
-}
-.subcategories-section{
-  padding: 3rem 7rem;
-}
+  .gender-age-submit-btn {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 2px 40px;
+    font-size: 23px;
+    line-height: 32px;
+  }
+
+  .coupon {
+
+    width: 80%;
+    margin: 31px;
+  }
+
+  .coupon-page>.product-buttons>button {
+    margin: 0 6px;
+  }
+
+  .categories-section>.categories {
+    padding: 50px 0px;
+  }
+
+  .subcategories-section {
+    padding: 3rem 7rem;
+  }
 }
 
 
@@ -874,32 +965,86 @@ margin: 0 50px;
   .signin-form .sign-input {
     padding: 10px 0 5px 35px;
     width: 203px;
-}
-}
-
-
-@media screen and (max-width:540px){
-
-.verification > img{
-  display: none;
-}
+  }
 }
 
-@media screen and (max-width:450px){
-  .gender-age-selection{
+
+@media screen and (max-width:540px) {
+
+  .verification>img {
+    display: none;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .gender-age-selection {
     height: 88vh
   }
 }
 
-*{
+* {
   font-family: 'Montserrat', sans-serif !important;
 }
 
 
 
-.multistep-form{
+
+
+
+
+@media screen and (max-width:850px){
+  .desc-text-poster{
+    flex-direction: column;
+  }
+  .product-promotion {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #000000;
+    box-shadow: 0px 4px 21px rgb(0 0 0 / 25%);
+    padding: 10px 10%;
+}
+.product-promotion>.promote-it {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 9px rgb(49 197 26 / 86%);
+  font-weight: bold;
+  font-size: 24px;
+  padding: 8px;
+}
+}
+
+
+@media screen and (max-width:450px) {
+  .Catdes-section>.desc-products {
+    flex-direction: column;
+}
+.desc-text-poster{
+  flex-direction: column;
+}
+
+.product-promotion{
+  flex-direction: column;
+  align-items: center;
+}
+.product-promotion>.promote-it{
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.desc-text-poster>p {
+  font-size: 16px;
+  text-align: center;
+}
+
+}
+
+.multistep-form {
   background: url("./Images/form-background.svg");
-  position: fixed;
   width: 100%;
   height: auto;
 }
+
