@@ -89,15 +89,13 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background: url(/src/Images/form-background.png);
+  background: linear-gradient(142.47deg, #FFFFFF 1.31%, #000000 66.3%, #000000 91.03%), linear-gradient(142.47deg, #FFFFFF 1.31%, #000000 59.3%), linear-gradient(142.98deg, #FFFFFF 3.16%, #000000 44.66%, rgba(255, 255, 255, 0.73) 99.2%);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
   width: 100%;
-  padding: 20px;
   border: 20px solid #469d38;
-  position: fixed;
-  height: auto;
+ padding: 4vh 20px;
 }
 
 .signin-form {
@@ -204,15 +202,13 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background: url(/src/Images/form-background.png);
+  background: linear-gradient(142.47deg, #FFFFFF 1.31%, #000000 66.3%, #000000 91.03%), linear-gradient(142.47deg, #FFFFFF 1.31%, #000000 59.3%), linear-gradient(142.98deg, #FFFFFF 3.16%, #000000 44.66%, rgba(255, 255, 255, 0.73) 99.2%);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
   width: 100%;
-  padding: 20px;
+  padding:5vh 20px;
   border: 20px solid #469d38;
-  position: fixed;
-  height: auto;
 }
 
 .verification-form {
@@ -557,7 +553,7 @@ a {
 }
 
 .single-product > img {
-  width: 100px;
+  width: 60px;
   margin-bottom: 10px;
 }
 .single-product > span,
@@ -610,29 +606,65 @@ a {
 
 /* category description page */
 .Catdes-section{
+  background: linear-gradient(90deg, #1B2E18 1.64%, #469D38 49.33%, #FFFFFF 49.64%);
+  background-repeat: no-repeat;
+ width: 100%;
+ height: auto;
+
+}
+.Catdes-section > .desc-products{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  text-align: center;
-  width: 100%;
-height: auto;
-background: linear-gradient(166.73deg, rgba(0, 0, 0, 0.8924) 11.75%, rgba(49, 197, 26, 0.8924) 90.46%);
+  justify-content: space-between;
+  padding: 50px;
 }
-.Catdes-section > img{
-  width: 100%;
- 
+.desc-content{
+  background: #FFFFFF;
+box-shadow: inset 0px 4px 52px #000000;
+display: flex;
+align-items: center;
+flex-direction: column;
+padding: 40px;
+margin: 0 50px;
 }
-.Catdes-section > p{
-  font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 30px;
-color: #FFFFFF;
-padding: 10px 60px;
+.desc-product-image{
+  width: 100%;
+  height: auto;
+}
+.desc-button {
+  cursor: pointer;
+  background: #469d38;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10%;
+  transition: all 0.2s ease-in-out;
+}
+.desc-button:hover {
+  background: #fff;
+  color: #469d38;
 }
 
+.desc-text-poster{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.desc-text-poster > p{
+  font-weight: bold;
+ 
+}
+.product-promotion{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+}
 /* end category description page */
 
 
@@ -747,16 +779,8 @@ padding: 10px 60px;
   width: 100%;
 
   }
-  .signin {
-    height: 91.5%;
-  width: 100%;
 
-}
-.verification {
-  height: 92vh;
-  width: 100%;
 
-}
 
 .categories-section > .categories{
   padding: 50px 90px;
@@ -783,11 +807,10 @@ padding: 10px 60px;
     width: 90%;
   }
   .signin {
-    height: 89vh;
+
+   padding: 11vh 20px;
   }
-  .verification{
-    height: 86vh;
-  }
+  
   .verification-form > h1{
     font-size: 30px;
   }
@@ -833,7 +856,7 @@ padding: 10px 60px;
   margin: 31px;
 }
 .coupon-page > .product-buttons > button {
-  margin: 0 10px;
+  margin: 0 6px;
 }
 .categories-section > .categories {
   padding: 50px 0px;
@@ -845,25 +868,7 @@ padding: 10px 60px;
 
 
 
-@media screen and (max-width: 375px){
-.signin {
-    height: 85vh;
-}
 
-  .verification {
-    height: 85vh;
-  }
-
-
-}
-
-@media screen and (max-width:550px){
-  .signin {
-    height: 86%;
-  width: 100%;
-
-}
-}
 
 @media screen and (max-width:280px) {
   .signin-form .sign-input {
@@ -872,35 +877,9 @@ padding: 10px 60px;
 }
 }
 
-@media screen and (max-width: 414px){
-.signin {
-    height: 89%;
-    width: 100%;
-}
-.verification {
-  height: 89vh;
-}}
 
-
-@media screen  and (max-width:360px){
-  .verification {
-    height: 87vh;
-  }
-}
-@media screen and (width:768px){
-  .verification {
-    height: 90vh;
-}
-}
-@media screen and (width:912px){
-  .verification {
-    height: 92.5%;
-}
-}
 @media screen and (max-width:540px){
-  .verification {
-    height: 87vh;
-}
+
 .verification > img{
   display: none;
 }
