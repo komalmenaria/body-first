@@ -10,6 +10,7 @@ function Genderage() {
   const [age, setAge] = useState(false);
   const [gender, setGender] = useState(false);
   const handleSubmit = async (e) => {
+    console.log("Handling Form")
     try {
       e.preventDefault()
       let from_age, to_age;
@@ -21,7 +22,7 @@ function Genderage() {
         alert.error("Plase select Gender")
         return
       }
-      
+      console.log(age)
       switch (age) {
         case "<18":
           from_age = 18
@@ -48,7 +49,7 @@ function Genderage() {
             to_age=59
             break;
           
-          case "60 +":
+          case "60+":
             from_age =null
             to_age=60
             break;

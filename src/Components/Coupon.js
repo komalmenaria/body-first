@@ -1,8 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 function Coupon() {
     const navigation = useNavigate();
+    let {coupon}=useSelector(state=>state.categoryData)
     function backtoproducts(){
         navigation('/products')
     }
@@ -14,7 +16,7 @@ function Coupon() {
             <div className="coupon-page">
                 <div className="coupon">
                     <h1>Your Coupon Number</h1>
-                    <span>XXXX09</span>
+                    <span>{coupon}</span>
                 </div>
                 <div className="product-buttons">
                     <button type='button' className='button-btn' onClick={backtoproducts}>Back To Products</button>

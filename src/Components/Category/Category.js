@@ -1,7 +1,11 @@
 import React,{useState,useEffect} from 'react'
-import {Link} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import { useDispatch } from 'react-redux'
+import { getQuestions } from '../../actions/categoryAction';
 
 function Category({category}) {
+  const navigation=useNavigate()
+  const dispatch =useDispatch();
   let {subcat_ids}=category
   const [url, setUrl] = useState("#");
 useEffect(() => {
@@ -11,13 +15,30 @@ useEffect(() => {
     setUrl(`/form`)
   } 
 }, [category.cat_id,subcat_ids]);
+
+const handleCatgeoryyClick =async(cat_id,title)=>{
+    try {
+      if(url=='/form'){
+        await dispatch(getQuestions({cat_id,title}))
+        navigation(url)
+      }else{
+        navigation(url)
+      }
+     
+    } catch (error) {
+      alert(error.message)
+    }
+  
+}
   return (
     <>
-    <Link to={url} className="single-category">
+    <button  className="single-category" onClick={()=>{
+      handleCatgeoryyClick(category.cat_id,category.cat_name)
+    }}>
         <img src={category.cat_img} alt="" />
 
         <span>{category.cat_name}</span>
-    </Link>
+    </button>
     </>
   )
 }
