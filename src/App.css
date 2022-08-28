@@ -1068,7 +1068,8 @@ a {
 .multistep-form > .single-form{
   background-color: #fff;
   padding: 20px 30px;
-    margin: 5% 40px;
+   width: 60%;
+   margin: 10% 0;
     display: flex;
     flex-direction: column;
   align-items: center;
@@ -1088,4 +1089,13 @@ a {
   background-color: #469D38;
   border-radius: 5px;
   margin: 0 100px;
+}
+.multi-q-s-form > center {
+  font-family: 'Port Lligat Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 69px;
+color: #000000;
+text-transform: capitalize;
 }
