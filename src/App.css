@@ -420,7 +420,7 @@ a {
   border: 20px solid #469d38;
   align-items: center;
   justify-content: center;
-
+text-align: center;
 }
 
 .categories-section>h1 {
@@ -1066,9 +1066,9 @@ border: none;
 }
 .multistep-form > .single-form{
   background-color: #fff;
-  padding: 20px 30px;
-   width: 60%;
-   margin: 10% 0;
+  padding: 20px 50px;
+width: 80%;
+   margin: 10% 20%;
     display: flex;
     flex-direction: column;
   align-items: center;
@@ -1078,8 +1078,9 @@ border: none;
 .next-pre-button-for-form {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 50px 0;
+  width: 100%;
 }
 .next-pre-button-for-form > button{
   border: 2px solid #fff;
@@ -1087,7 +1088,7 @@ border: none;
   color: #fff;
   background-color: #469D38;
   border-radius: 5px;
-  margin: 0 5%;
+  margin: 0 20%;
 }
 .multi-q-s-form > center {
   font-family: 'Port Lligat Slab';
@@ -1098,7 +1099,9 @@ line-height: 69px;
 color: #000000;
 text-transform: capitalize;
 }
-
+.next-pre-button-for-form > .next-question{
+  padding: 10px 30px;
+}
 .next-pre-button-for-form > .next-question:disabled{
   background-color: #ffffff ;
   color: #469D38 ;
@@ -1118,6 +1121,7 @@ text-transform: capitalize;
   align-items: center;
   justify-content: center;
   margin-top: -90px;
+  margin-bottom: 50px;
 }
 
 .open-single-product-bg > .open-single-product > h3{
@@ -1132,7 +1136,7 @@ text-transform: capitalize;
 }
 .open-single-product-bg > .open-single-product > div{
 background: #FFFFFF;
-padding:20px 40px;
+padding:20px 60px;
 box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
 }
 
@@ -1147,18 +1151,24 @@ font-weight: 600;
 }
 .price-and-icon > p{
   margin-top: 15px;
+  font-size: 20px;
+  font-family: 'Port Lligat Slab' !important;
 }
 
 .addtocart-for-oepn-single-product{
   margin-left: 20px;
 }
+
 @media screen and (max-width:850px){
 
   .open-single-product-bg > .open-single-product{
    
     margin-top: 10px;
   }
-  
+  .multistep-form > .single-form{
+    margin: 10%;
+    padding: 20px 6px;
+  }
 .open-single-product-bg > .open-single-product > h3{
   font-size: 25px;
   font-weight: 700;
@@ -1174,3 +1184,35 @@ font-weight: 600;
   }
 }
 
+.single-ans-filed > input[type=radio]{
+margin: 0 10px;
+accent-color:#36fa16;
+}
+
+.single-ans-filed > label{
+  font-size: 20px;
+
+}
+
+@media screen and (max-width:500px){
+  .multistep-form > .single-form > h1{
+    font-size: 23px;
+  }
+  .multi-q-s-form > center{
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .single-ans-filed > label {
+    font-size: 16px;
+}
+.next-pre-button-for-form > button {
+  margin: 0 10px;
+}
+.product-buttons{
+  flex-direction: column;
+}
+}
+.navbar-toggler{
+  border: none !important;
+}
