@@ -50,7 +50,7 @@ function Question({ question }) {
                         let valueIsChecked=questionsWithAnsers.find(e=>e.answer_id==answer.answer_id )
                         return (
                             <div className='single-ans-filed'>
-                                <input type="radio"  name="fav_language" value={answer.answer_id} checked={valueIsChecked?true:false}  onChange={()=>{
+                                <input type="radio"  value={answer.answer_id} checked={valueIsChecked?true:false}  onChange={()=>{
                                     handleAnsersChanges(answer.questions_id,answer.answer_id)
                                 }}/>
                                 <label>{answer.answer_val}</label>

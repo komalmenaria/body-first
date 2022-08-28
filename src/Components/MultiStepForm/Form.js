@@ -48,12 +48,8 @@ function Form() {
             :"No question Found"
           }
          <div className="next-pre-button-for-form">
-          <button type="button" onClick={handlePrev}>Previous</button>
-         
-        
-           <button type="button" className='next-question' onClick={HandleNext} disabled={questionsWithAnsers.find(e=>e?.questions_id==questions[CurrentIndex]?.questions_id)?false:true} >Next</button>
-         
-          
+          <button type="button" onClick={handlePrev}>Previous</button>     
+           <button type="button" className='next-question' onClick={HandleNext} disabled={questionsWithAnsers.find(e=>e?.questions_id==questions[CurrentIndex]?.questions_id)?false:true} >Next</button>          
         </div>
         
         </div>
