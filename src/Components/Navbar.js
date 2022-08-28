@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import Bodyfirstlogo from "../Images/Body-First-Logo.png"
 import Cart from "../Images/Cart.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useSelector } from 'react-redux';
 
 
 function Navbar() {
+  let { products, cart } = useSelector(state => state.categoryData)
   return (
     <>
       <nav className="navbar navbar-dark navbar-expand-lg bg-dark body-first-navbar">
@@ -26,7 +28,7 @@ function Navbar() {
                       alt=""
                     />
                     <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
-                      99+
+                     {cart.length?cart.length :0 }
                     </span>
                   </button>
                 </Link>

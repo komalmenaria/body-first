@@ -1,13 +1,22 @@
 import React from 'react'
-import { useSelector,useDispatch } from 'react-redux'
-function Subcategory({subcatimage,subcatname}) {
-  let {}=useSelector(state=>state.categoryReducer)
+import { useNavigate } from 'react-router-dom'
+import img2 from "./Category/Weightloss.png"
+
+function Subcategory({ subcat }) {
+  const navigation=useNavigate()
+  // console.log(subcat)
+  const HandleOnclick=()=>{
+    
+    navigation(`/catdesc?subcat_id=${subcat.subcat_id}`)
+  }
   return (
-    <div className='subcategory-single'>
-<img src={subcatimage} alt="" />
-<span>{subcatname}</span>
+    <button onClick={HandleOnclick}>
+    <div className='subcategory-single' >
+      <img src={subcat.subcat_img ? subcat.subcat_img : img2} alt="" />
+      <span>{subcat.subcat_name}</span>
 
     </div>
+    </button>
   )
 }
 
