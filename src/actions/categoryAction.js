@@ -1,7 +1,7 @@
 import axios from "axios"
 
 import Config from "../Config"
-import { GET_CATEGORY, GET_QUESTION, GET_PRODUCTS ,ADD_TO_CART,CHECKOUT,GET_COUPON} from '../Constant'
+import { GET_CATEGORY, GET_QUESTION, GET_PRODUCTS ,ADD_TO_CART,CHECKOUT,GET_COUPON,SET_ANSWERS} from '../Constant'
 let user = localStorage.getItem('user')
 let token
 if (user) {
@@ -150,4 +150,27 @@ export const getCoupon=(body)=>async (dispatch)=>{
             reject(error)
         }
     }) 
+}
+
+
+
+
+export const setAnswers=(body)=>async (dispatch)=>{
+    return new Promise( async(resolve,reject)=>{
+        try {
+         
+            
+            dispatch({
+                type: SET_ANSWERS + "SUCCESS",
+                payload: body
+            })
+            resolve(body)
+        } catch (error) {
+            dispatch({
+                type: SET_ANSWERS + "FAILED",
+                payload: error.response.data.message || "Network Issue",
+            })
+            reject(error)
+        }
+    })
 }

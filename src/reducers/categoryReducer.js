@@ -1,5 +1,5 @@
 
-import { GET_CATEGORY,GET_QUESTION,GET_PRODUCTS,ADD_TO_CART,CHECKOUT,GET_COUPON} from "../Constant"
+import { GET_CATEGORY,GET_QUESTION,GET_PRODUCTS,ADD_TO_CART,CHECKOUT,GET_COUPON,SET_ANSWERS} from "../Constant"
 const intiialState = {
    categories:[],
    loading:false,
@@ -10,7 +10,8 @@ const intiialState = {
    products:[],
    cart:[],
    checkout:[],
-   coupon:null
+   coupon:null,
+   questionsWithAnsers:[]
 }
 const categoryReducer = (state = intiialState, action) => {
     switch (action.type) {
@@ -62,6 +63,11 @@ const categoryReducer = (state = intiialState, action) => {
                     return {
                         ...state,
                         coupon:action.payload
+                    }
+                case SET_ANSWERS+"SUCCESS":
+                    return {
+                        ...state,
+                        questionsWithAnsers:action.payload
                     }
         default:
             return state

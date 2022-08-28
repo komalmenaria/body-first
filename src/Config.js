@@ -9,7 +9,7 @@ module.exports = Object.freeze({
      GET_CATEGORY:"user/getcatandsubcat",
      GET_QUESTION:"questions/",
      GET_PRODUCTS:"user/products",
-    GET_COUPON:"user/cart"
+     GET_COUPON:"user/cart"
     //  redux case
 
 

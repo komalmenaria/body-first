@@ -11,9 +11,6 @@ function Products() {
   function backtoCategories(){
     navigation('/categories')
   }
-useEffect(() => {
- dispatch(getProducts({"answers":[1,3]}))
-}, [dispatch]);
 const allProductsInCart = async()=>{
   try {
     if(products.length){
@@ -30,7 +27,7 @@ const allProductsInCart = async()=>{
     <div className="products">
     
             <div className="all-products">
-            { products.length&& products.map((item, index) => {
+            { products.length? products.map((item, index) => {
               return (
                 <Singleproduct
                   key={index}
@@ -41,7 +38,7 @@ const allProductsInCart = async()=>{
                   productObj={item}
                 />
               );
-            })}
+            }) :"No Product Available on selected preference"}
             </div>
             <div className="product-buttons">
       <button type='button' className='button-btn' onClick={backtoCategories} >Back to Categories</button>
