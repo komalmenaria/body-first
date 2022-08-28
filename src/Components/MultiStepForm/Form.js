@@ -31,7 +31,12 @@ function Form() {
   
  }
  const handlePrev=()=>{
-  setCurrentIndex(CurrentIndex-1)
+  if(CurrentIndex==0){
+    navigation('/categories')
+  }else{
+    setCurrentIndex(CurrentIndex-1)
+  }
+ 
  }
   return (
     <>
@@ -43,11 +48,11 @@ function Form() {
             :"No question Found"
           }
          <div className="next-pre-button-for-form">
-          {CurrentIndex !=0 && <button type="button" onClick={handlePrev}>Previous</button>}
-         {
-           questionsWithAnsers.find(e=>e.questions_id==questions[CurrentIndex].questions_id) &&
-           <button type="button" onClick={HandleNext} >Next</button>
-         }
+          <button type="button" onClick={handlePrev}>Previous</button>
+         
+        
+           <button type="button" onClick={HandleNext} disabled={questionsWithAnsers.find(e=>e?.questions_id==questions[CurrentIndex]?.questions_id)?false:true} >Next</button>
+         
           
         </div>
         
