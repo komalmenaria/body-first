@@ -15,6 +15,7 @@ import Products from './Product/Products.js'
 import Cart from './Cart';
 import Coupon from './Coupon';
 import Catdesc from './Catdesc';
+import Openproduct from './Openproduct';
 
 
 
@@ -35,6 +36,8 @@ function Main() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/coupon" element={<Coupon />} />
           <Route exact path="/catdesc" element={<Catdesc />} />
+          <Route exact path="/openproduct" element={<Openproduct />} />
+          
 
 
 

@@ -78,7 +78,7 @@ a {
   line-height: 25px;
   color: #ffffff;
   padding: 15px 20px;
-  margin-top: 450px;
+  margin-top: 60vh;
 }
 
 .explore-body-first:hover {
@@ -437,7 +437,7 @@ a {
 
 .single-category {
   /* position: absolute; */
-
+border: none;
   margin: 30px;
   backdrop-filter: blur(300px);
   background: #ffffff;
@@ -826,7 +826,7 @@ a {
   }
 
   .verification {
-    width: auto;
+    
     height: 100%;
   }
 
@@ -836,7 +836,6 @@ a {
   }
 
   .coupon-page {
-    width: auto;
     height: 100%;
   }
 
@@ -1083,12 +1082,12 @@ a {
   margin: 50px 0;
 }
 .next-pre-button-for-form > button{
-  border: none;
+  border: 2px solid #fff;
   padding: 10px 20px;
   color: #fff;
   background-color: #469D38;
   border-radius: 5px;
-  margin: 0 100px;
+  margin: 0 5%;
 }
 .multi-q-s-form > center {
   font-family: 'Port Lligat Slab';
@@ -1099,3 +1098,79 @@ line-height: 69px;
 color: #000000;
 text-transform: capitalize;
 }
+
+.next-pre-button-for-form > .next-question:disabled{
+  background-color: #ffffff ;
+  color: #469D38 ;
+  font-weight: bold;
+  border: 2px solid #469D38;
+}
+.open-single-product-bg{
+  background: linear-gradient(133.92deg, rgba(0, 0, 0, 0.72) 4.83%, rgba(101, 245, 78, 0) 59.02%), #FFFFFF;
+  padding: 20px;
+  display: flex;
+ 
+  flex-direction: column;
+}
+ .open-single-product-bg > .open-single-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -90px;
+}
+
+.open-single-product-bg > .open-single-product > h3{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.open-single-product-bg > .open-single-product > .open-product-img{
+  width: 100px;
+  height: auto;
+}
+.open-single-product-bg > .open-single-product > div{
+background: #FFFFFF;
+padding:20px 40px;
+box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
+}
+
+.open-single-product-bg > .open-single-product > div > .product-name{
+font-size: 30px;
+font-weight: 600;
+}
+ .price-and-icon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price-and-icon > p{
+  margin-top: 15px;
+}
+
+.addtocart-for-oepn-single-product{
+  margin-left: 20px;
+}
+@media screen and (max-width:850px){
+
+  .open-single-product-bg > .open-single-product{
+   
+    margin-top: 10px;
+  }
+  
+.open-single-product-bg > .open-single-product > h3{
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.open-single-product-bg{
+  align-items: center;
+  justify-content: center;
+}
+.open-single-product-bg > .open-single-product > div > .product-name{
+  font-size: 20px;
+  font-weight: 600;
+  }
+}
+
