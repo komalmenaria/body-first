@@ -94,13 +94,14 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background: linear-gradient(142.47deg, #FFFFFF 1.31%, #000000 66.3%, #000000 91.03%), linear-gradient(142.47deg, #FFFFFF 1.31%, #000000 59.3%), linear-gradient(142.98deg, #FFFFFF 3.16%, #000000 44.66%, rgba(255, 255, 255, 0.73) 99.2%);
+  background: linear-gradient(304.05deg, #000000 40.27%, rgba(0, 0, 0, 0) 86.48%), linear-gradient(304.05deg, #000000 40.27%, rgba(0, 0, 0, 0) 93.39%);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
   width: 100%;
   border: 20px solid #469d38;
   padding: 4vh 20px;
+  height: auto;
 }
 
 .signin-form {
@@ -125,7 +126,7 @@ a {
   border-radius: 5px;
   outline: none;
   font-weight: 600;
-  /* margin-right: 30px; */
+  margin-top: 30px;
   text-transform: capitalize;
 }
 
@@ -223,6 +224,8 @@ a {
   width: 100%;
   padding: 5vh 20px;
   border: 20px solid #469d38;
+  height: auto;
+
 }
 
 .verification-form {
@@ -269,6 +272,7 @@ a {
   flex-direction: column;
   padding: 30px 0;
   border: 20px solid #469d38;
+  height: auto;
 
 }
 
@@ -421,6 +425,8 @@ a {
   align-items: center;
   justify-content: center;
 text-align: center;
+height: auto;
+
 }
 
 .categories-section>h1 {
@@ -487,6 +493,7 @@ border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
 
 }
 
@@ -504,6 +511,12 @@ border: none;
 .all-sub-categories {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.all-sub-categories > button{
+  border: none;
+  background: none;
 }
 
 .subcategory-single {
@@ -555,6 +568,10 @@ border: none;
       rgba(0, 0, 0, 0.5246) 3.28%,
       rgba(255, 255, 255, 0.86) 52.55%),
     #ffffff;
+  height: auto;
+  justify-content: center;
+  padding: 10% 0;
+
 }
 
 .products>.all-products {
@@ -619,6 +636,9 @@ border: none;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.products > .product-buttons{
+  margin-top: 40px;
 }
 
 .product-buttons>.button-btn {
@@ -753,8 +773,8 @@ border: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  height: auto;
+  height: 100vh;
+
 }
 
 .coupon {
@@ -788,30 +808,7 @@ border: none;
     height: auto;
   }
 
-  .signin {
-    width: 100%;
-    height: auto;
-  }
-
-  .verification {
-    width: 100%;
-    height: auto;
-  }
-
-  .gender-age-selection {
-    width: 100%;
-    height: auto;
-  }
-
-  .coupon-page {
-    width: 100%;
-    height: auto;
-  }
-
-  .subcategories-section {
-    width: 100%;
-    height: auto;
-  }
+ 
 }
 
 @media (max-aspect-ratio: 16/9) {
@@ -820,29 +817,6 @@ border: none;
     height: 100%;
   }
 
-  .signin {
-    width: 100%;
-    height: 100%;
-  }
-
-  .verification {
-    
-    height: 100%;
-  }
-
-  .gender-age-selection {
-    width: auto;
-    height: 100%;
-  }
-
-  .coupon-page {
-    height: 100%;
-  }
-
-  .subcategories-section {
-
-    height: 100%;
-  }
 }
 
 
@@ -868,9 +842,7 @@ border: none;
     padding: 21.3rem 7rem;
   }
 
-  .gender-age-selection {
-    height: 91vh;
-  }
+ 
 }
 
 @media screen and (max-width:450px) {
@@ -975,11 +947,7 @@ border: none;
   }
 }
 
-@media screen and (max-width:450px) {
-  .gender-age-selection {
-    height: 88vh
-  }
-}
+
 
 * {
   font-family: 'Montserrat', sans-serif !important;

@@ -1,5 +1,6 @@
 import React , {useState,useEffect} from "react";
 import signimg from "../Images/signin-side-image.svg";
+
 import { useNavigate} from "react-router";
 import { useSelector,useDispatch } from "react-redux";
 
@@ -52,7 +53,7 @@ function Signin() {
     <>
       <div className="signin">
         <div  className="signin-form">
-          <h1>SIGNIN</h1>
+          <h1>SIGN IN</h1>
           <input type="text" name={user_name} placeholder="Name"  className="sign-input username" required onChange={(e)=>setUser_name(e.target.value)} />
           <input type="text" name={user_phone} placeholder="Phone Number" className="sign-input userphone" required onChange={(e)=>setUser_phone(e.target.value)}  />
            <label className="check-privacy-label" htmlFor="privacy">

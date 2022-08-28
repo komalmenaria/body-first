@@ -16,6 +16,7 @@ import Cart from './Cart';
 import Coupon from './Coupon';
 import Catdesc from './Catdesc';
 import Openproduct from './Openproduct';
+import Spinner from './Spinner';
 
 
 
@@ -37,6 +38,8 @@ function Main() {
           <Route exact path="/coupon" element={<Coupon />} />
           <Route exact path="/catdesc" element={<Catdesc />} />
           <Route exact path="/openproduct" element={<Openproduct />} />
+          <Route exact path="/spinner" element={<Spinner />} />
+
           
 
 

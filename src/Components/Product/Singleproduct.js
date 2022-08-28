@@ -13,7 +13,7 @@ function Singleproduct({ prodname, prodimg, prodprice, prod_id, productObj }) {
   const [cartItem, setcartItem] = useState([]);
   const [show, setShow] = useState(true)
   useEffect(() => {
-    let productInCart = cart.find(e => e.product_id == prod_id)
+    let productInCart = cart.find(e => e.product_id === prod_id)
     if (productInCart) {
       setShow(false)
     }
