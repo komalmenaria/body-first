@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useSelector ,useDispatch} from 'react-redux'
 import { setAnswers } from '../../actions/categoryAction'
@@ -66,6 +67,7 @@ function Question({ question }) {
             </form>
         </>
     )
+
 }
 
-export default Question
+export default Question;
