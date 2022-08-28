@@ -1045,6 +1045,7 @@ a {
 
 .multistep-form {
   background: url("./Images/multiquestion.png");
+  
   width: 100%;
   height: auto;
   display: flex;
@@ -1066,10 +1067,25 @@ a {
 }
 .multistep-form > .single-form{
   background-color: #fff;
-  padding: 100px 100px;
-    margin: 10% 40px;
+  padding: 20px 30px;
+    margin: 5% 40px;
     display: flex;
     flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.next-pre-button-for-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.next-pre-button-for-form > button{
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #469D38;
+  border-radius: 5px;
+  margin: 0 100px;
 }
