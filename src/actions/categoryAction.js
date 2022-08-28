@@ -2,7 +2,9 @@ import axios from "axios"
 
 import Config from "../Config"
 import { GET_CATEGORY, GET_QUESTION, GET_PRODUCTS ,ADD_TO_CART,CHECKOUT,GET_COUPON,SET_ANSWERS} from '../Constant'
-let user = localStorage.getItem('user')
+
+export const getCategory = () => async (dispatch) => {
+    let user = localStorage.getItem('user')
 let token
 if (user) {
     user = JSON.parse(user)
@@ -13,7 +15,6 @@ let config = {
         token
     }
 }
-export const getCategory = () => async (dispatch) => {
     return new Promise(async (resolve, resject) => {
 
         try {
@@ -40,6 +41,17 @@ export const getCategory = () => async (dispatch) => {
 }
 
 export const getQuestions = (body) => async (dispatch) => {
+    let user = localStorage.getItem('user')
+let token
+if (user) {
+    user = JSON.parse(user)
+    token = user.token
+}
+let config = {
+    headers: {
+        token
+    }
+}
     return new Promise(async (resolve, reject) => {
         try {
             dispatch({
@@ -65,6 +77,17 @@ export const getQuestions = (body) => async (dispatch) => {
 
  
 export const getProducts = (body) => async (dispatch) => {
+    let user = localStorage.getItem('user')
+let token
+if (user) {
+    user = JSON.parse(user)
+    token = user.token
+}
+let config = {
+    headers: {
+        token
+    }
+}
     return new Promise(async (resolve, reject) => {
         try {
             dispatch({
@@ -127,6 +150,17 @@ export const addToCheckout=(body)=>async (dispatch)=>{
     })
 }
 export const getCoupon=(body)=>async (dispatch)=>{
+    let user = localStorage.getItem('user')
+let token
+if (user) {
+    user = JSON.parse(user)
+    token = user.token
+}
+let config = {
+    headers: {
+        token
+    }
+}
     return new Promise( async(resolve,reject)=>{
         try {
          
