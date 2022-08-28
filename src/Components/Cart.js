@@ -53,7 +53,7 @@ function Cart() {
             </div>
             <div className="product-buttons">
       <button type='button' className='button-btn' onClick={backtoproducts}>Back to Products</button>
-      {checkout.length ? <button type='button' className='button-btn' onClick={generateCoupan}>Get Coupon</button> :""}
+      <button type='button' className='button-btn' disabled= {checkout.length ?false:true} onClick={generateCoupan}>Get Coupon</button> 
      
 
     </div>

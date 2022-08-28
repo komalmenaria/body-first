@@ -10,21 +10,21 @@ function Category({category}) {
   const [url, setUrl] = useState("#");
 useEffect(() => {
   if(subcat_ids?.length){
-    setUrl(`/subcategories/${category.cat_id}`)
+    setUrl(`/subcategories?cat_id=${category.cat_id}`)
   }else{
-    setUrl(`/form`)
+    setUrl(`/catdesc?cat_id=${category.cat_id}`)
   } 
 }, [category.cat_id,subcat_ids]);
 
 const handleCatgeoryyClick =async(cat_id,title)=>{
     try {
-      if(url=='/form'){
-        await dispatch(getQuestions({cat_id,title}))
-        navigation(url)
-      }else{
-        navigation(url)
-      }
-     
+      // if(url==`/catdesc?cat_id=${cat_id}`){
+      //   await dispatch(getQuestions({cat_id,title}))
+      //   navigation(url)
+      // }else{
+      //   navigation(url)
+      // }
+      navigation(url)
     } catch (error) {
       alert(error.message)
     }
