@@ -4,7 +4,7 @@ import Main from './Components/Main';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Aos from 'aos';
 import "aos/dist/aos.css"
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 function App() {
  useEffect(() => {

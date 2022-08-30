@@ -53,6 +53,7 @@ a {
   background: #fff !important;
 border-top: 1px  solid #469D38;
 border-bottom: 1px  solid #469D38;
+z-index: 2;
 
 }
 .main-logo>img {
@@ -1228,3 +1229,5 @@ accent-color:#36fa16;
   .open-single-product-bg > .open-single-product {
     margin-bottom: 0;
   }}
+
+ 

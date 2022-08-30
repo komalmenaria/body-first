@@ -54,6 +54,7 @@ function Signin() {
   return (
     <>
       <div className="signin" data-aos="zoom-in">
+        
         <div  className="signin-form" data-aos="fade-up">
           <h1>SIGN IN</h1>
           <input data-aos="fade-right" data-aos-duration="3000" type="text" name={user_name} placeholder="Name"  className="sign-input username" required onChange={(e)=>setUser_name(e.target.value)} />
