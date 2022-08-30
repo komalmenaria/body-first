@@ -23,7 +23,7 @@ function Products() {
   };
   return (
     <>
-      <div className="products">
+      <div className="products" data-aos="zoom-in">
         <div className="all-products">
           {products.length
             ? products.map((item, index) => {
@@ -45,6 +45,7 @@ function Products() {
             type="button"
             className="button-btn"
             onClick={backtoCategories}
+            
           >
             Back to Categories
           </button>

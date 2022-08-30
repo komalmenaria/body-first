@@ -42,7 +42,7 @@ function Question({ question }) {
     
     return (
         <>
-            <form action="#" className="multi-q-s-form">
+            <form action="#" className="multi-q-s-form" data-aos="fade-left">
                 <center>{question.questions_val}</center>
 
                 <div className='option-fields'>

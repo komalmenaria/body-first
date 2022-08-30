@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react'
 import { useNavigate} from "react-router-dom";
 import { useDispatch } from 'react-redux'
 import { getQuestions } from '../../actions/categoryAction';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 function Category({category}) {
   const navigation=useNavigate()
@@ -32,10 +34,10 @@ const handleCatgeoryyClick =async(cat_id,title)=>{
 }
   return (
     <>
-    <button  className="single-category" onClick={()=>{
+    <button  data-aos="flip-down" className="single-category" onClick={()=>{
       handleCatgeoryyClick(category.cat_id,category.cat_name)
     }}>
-        <img src={category.cat_img} alt="" />
+        <LazyLoadImage effect="blur" id="single-cat-img" src={category.cat_img} alt="" />
 
         <span>{category.cat_name}</span>
     </button>

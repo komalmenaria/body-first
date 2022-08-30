@@ -40,8 +40,8 @@ function Form() {
  }
   return (
     <>
-      <div className="multistep-form">
-        <div className="single-form">
+      <div className="multistep-form" data-aos="zoom-in">
+        <div className="single-form" >
           <h1> {title}</h1>
           {questions.length ?
             <Question question={questions[CurrentIndex]}/>

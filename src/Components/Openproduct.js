@@ -7,7 +7,7 @@ import { addToCart } from '../actions/categoryAction'
 
 import Logo from './Logo'
 import { useLocation, useNavigate } from 'react-router-dom'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Openproduct({}) {
   const navigation= useNavigate()
@@ -52,14 +52,15 @@ function Openproduct({}) {
   }
   return (
     <>
-      <section className='open-single-product-bg'>
+      <section className='open-single-product-bg' data-aos="zoom-in">
         <Logo height={150} width={220} />
-        <div className="open-single-product">
+        <div className="open-single-product" data-aos="zoom-in">
 
           <h3>{title}</h3>
 
-          <img className='open-product-img' src={prodObj.product_img ? prodObj.product_img : productDefalutImage} alt="" />
-          <div className="open-single-product-info">
+         
+          <LazyLoadImage effect="blur" data-aos="fade-up" className='open-product-img' src={prodObj.product_img ? prodObj.product_img : productDefalutImage}  />
+          <div className="open-single-product-info" >
             <span className='product-name'>{prodObj?.product_name} </span>
             <div className="position-relative price-and-icon">
 
@@ -69,7 +70,7 @@ function Openproduct({}) {
                 handleCart(product_id, show)
               }}>
                 {
-                  show ? <img src={removewish} alt="addtocart" className='addtocart addtocart-for-oepn-single-product' /> : <img src={addwish} alt="addtocart" className='addtocart addtocart-for-oepn-single-product' />
+                  show ? <LazyLoadImage effect="blur" src={removewish} alt="addtocart" className='addtocart addtocart-for-oepn-single-product' /> : <LazyLoadImage effect="blur" src={addwish} alt="addtocart" className='addtocart addtocart-for-oepn-single-product' />
                 }
 
               </span>

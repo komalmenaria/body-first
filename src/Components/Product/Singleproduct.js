@@ -4,11 +4,13 @@ import addwish from "./Productsimg/addwish.png"
 import productDefalutImage from './Productsimg/product1.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { addToCart } from '../../actions/categoryAction'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 function Singleproduct({ prodname, prodimg, prodprice, prod_id, productObj }) {
   const dispatch = useDispatch()
-  const navigation=useNavigate()
+  const navigation = useNavigate()
   let { cart } = useSelector(state => state.categoryData)
   const [cartItem, setcartItem] = useState([]);
   const [show, setShow] = useState(true)
@@ -39,20 +41,22 @@ function Singleproduct({ prodname, prodimg, prodprice, prod_id, productObj }) {
   }
   return (
     <>
-      <div className="single-product position-relative" >
+      <div className="single-product position-relative" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
         <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill" onClick={() => {
           setShow(!show);
           handleCart(prod_id, show)
         }}>
           {
-            show ? <img src={removewish} alt="addtocart" className='addtocart' /> : <img src={addwish} alt="addtocart" className='addtocart' />
+            show ? <LazyLoadImage effect="blur" src={removewish} alt="addtocart" className='addtocart' /> : <LazyLoadImage effect="blur" src={addwish} alt="addtocart" className='addtocart' />
           }
           <span className="visually-hidden">unread messages</span>
         </span>
-        <img src={prodimg ? prodimg : productDefalutImage} alt="" onClick={()=>{
-        
-        navigation(`/openproduct?product_id=${prod_id}`)
-      }} />
+        <LazyLoadImage id='product-singleimg' effect="blur" src={prodimg ? prodimg : productDefalutImage} alt="" onClick={() => {
+
+          navigation(`/openproduct?product_id=${prod_id}`)
+        }} />
         <span>{prodname}</span>
         <p>&#x20a8; <span>{prodprice}</span></p>
       </div>

@@ -1,8 +1,10 @@
 import React , {useState,useEffect} from "react";
 import signimg from "../Images/signin-side-image.svg";
 
+
 import { useNavigate} from "react-router";
 import { useSelector,useDispatch } from "react-redux";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { useAlert } from 'react-alert'
 import { getOtp } from "../actions/loginAction";
@@ -51,20 +53,20 @@ function Signin() {
 //  
   return (
     <>
-      <div className="signin">
-        <div  className="signin-form">
+      <div className="signin" data-aos="zoom-in">
+        <div  className="signin-form" data-aos="fade-up">
           <h1>SIGN IN</h1>
-          <input type="text" name={user_name} placeholder="Name"  className="sign-input username" required onChange={(e)=>setUser_name(e.target.value)} />
-          <input type="text" name={user_phone} placeholder="Phone Number" className="sign-input userphone" required onChange={(e)=>setUser_phone(e.target.value)}  />
+          <input data-aos="fade-right" data-aos-duration="3000" type="text" name={user_name} placeholder="Name"  className="sign-input username" required onChange={(e)=>setUser_name(e.target.value)} />
+          <input data-aos="fade-right" data-aos-duration="3000" type="text" name={user_phone} placeholder="Phone Number" className="sign-input userphone" required onChange={(e)=>setUser_phone(e.target.value)}  />
            <label className="check-privacy-label" htmlFor="privacy">
             <input type="checkbox" id="privacy" name="privacy" value={is_privacy} className="checkbox" onChange={(e)=> setIs_privacy(!is_privacy)}  />
                <p>By Check this you agree to our <span>Privacy policy </span>
               and <span>Terms of services</span>.</p>
             </label>
-            <button onClick={getOTP}   className='from-button'>Send OTP</button>
+            <button  onClick={getOTP}   className='from-button'>Send OTP</button>
         </div>
 
-        <img src={signimg} alt="" />
+        <img id="sign-inside" effect="blur" src={signimg} alt="" />
       </div>
     </>
   );

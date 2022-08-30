@@ -37,7 +37,7 @@ function Cart() {
     }
   return (
     <>
-    <div className="products">
+    <div className="products" data-aos="zoom-in">
     
             <div className="all-products">
               {cart.length ?cart.map((item, index) => {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getQuestions } from "../actions/categoryAction"; 
 import { useNavigate, useLocation } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import products from "../Images/Descriptionproducts.png";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import poster from "../Images/DescPoster.png";
 import promot from "../Images/descpromoproduct.png";
@@ -59,22 +59,23 @@ function Catdesc() {
   return (
     <>
       {cat_id ?
-        <div className="Catdes-section">
-          <div className="desc-products">
+        <div className="Catdes-section" data-aos="zoom-in">
+          <div className="desc-products" >
             <Logo height={100} width={100} />
             <LazyLoadImage
               effect="blur"
               className="desc-product-image"
               src={catObj?.product_img ? catObj.product_img : products}
               alt=""
+              
             />
           </div>
           <div className="desc-content">
-            <button type="button" className="desc-button" onClick={handleClick}>
+            <button type="button" className="desc-button" onClick={handleClick} data-aos="fade-down">
               Next
             </button>
             <div className="desc-text-poster">
-              <p>
+              <p > 
                 {catObj?.cat_desc}
               </p>
               <LazyLoadImage
@@ -82,6 +83,7 @@ function Catdesc() {
                 className="desc-product-image"
                 src={catObj?.poster_img ? catObj.poster_img : poster}
                 alt=""
+                data-aos="zoom-in-up"
               />
             </div>
           </div>
@@ -93,15 +95,15 @@ function Catdesc() {
               alt=""
             />
 
-            <div className="promote-it">
+            <div className="promote-it"   >
               <p>50+</p>
               <span>Product</span>
             </div>
-            <div className="promote-it">
+            <div className="promote-it"  >
               <p>2000+</p>
               <span>Customer</span>
             </div>
-            <div className="promote-it">
+            <div className="promote-it"  >
               <p>3000+</p>
               <span>Positive feedback</span>
             </div>

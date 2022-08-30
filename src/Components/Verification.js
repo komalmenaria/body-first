@@ -1,4 +1,6 @@
 import React , {useState} from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import signimg from "../Images/signin-side-image.svg";
 import { useNavigate  } from "react-router";
 import { useAlert } from 'react-alert'
@@ -38,15 +40,15 @@ function Verification() {
 
   return (
     <>
-      <div className="verification">
+      <div className="verification" data-aos="zoom-in">
         <div action="blank" className="verification-form">
           <h1>VERIFICATION</h1>
-          <input type="text" name="otp" placeholder="Enter OTP"  className="verify-input otp" required value={user_otp} onChange={(e)=>setUser_otp(e.target.value)}/>
+          <input data-aos="fade-right" data-aos-duration="3000" type="text" name="otp" placeholder="Enter OTP"  className="verify-input otp" required value={user_otp} onChange={(e)=>setUser_otp(e.target.value)}/>
          <p>You will get otp on your mobile number </p>
          <button className='from-button' onClick={verifyOTP} >Verify</button>
         </div>
 
-        <img src={signimg} alt="" />
+        <img id="sign-inside" effect="blur" src={signimg} alt="" />
       </div>
     </>
   );

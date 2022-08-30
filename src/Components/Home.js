@@ -8,7 +8,7 @@ function Home() {
     <>
     <div className='home'>
     <video src={Video}  autoPlay loop muted playsInline poster={poster} />
-    <Link to="/signin" className='explore-body-first'>EXPLORE BODY FIRST</Link>
+    <Link to="/signin" className='explore-body-first' data-aos="zoom-in" >EXPLORE BODY FIRST</Link>
     </div>
     </>
   )

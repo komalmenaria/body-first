@@ -3,6 +3,8 @@ import removewish from "./Product/Productsimg/removewish.png"
 import addwish from "./Product/Productsimg/addwish.png"
 import check from "./Product/Productsimg/Checked-Checkbox.png"
 import uncheck from "./Product/Productsimg/Unchecked-Checkbox.png"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import productDefalutImage from './Product/Productsimg/product1.png'
 import { useSelector,useDispatch } from 'react-redux'
 import { addToCart,addToCheckout } from '../actions/categoryAction'
@@ -63,7 +65,9 @@ function Singlewishlistitem({ product }) {
   
   return (
     <>
-      <div className="single-product position-relative">
+      <div className="single-product position-relative"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <span className="position-absolute bottom-0 start-0 translate-middle badge rounded-pill"
         onClick={()=>{
           setShow(!show);
@@ -71,7 +75,7 @@ function Singlewishlistitem({ product }) {
         }}
         >
           {
-            show ? <img src={removewish} alt="addedtocart" className='addedtocart' /> : <img src={addwish} alt="addedtocart" className='addedtocart' />
+            show ? <LazyLoadImage effect="blur" src={removewish} alt="addedtocart" className='addedtocart' /> : <LazyLoadImage effect="blur" src={addwish} alt="addedtocart" className='addedtocart' />
           }
 
         </span>
@@ -81,11 +85,11 @@ function Singlewishlistitem({ product }) {
           
         } }>
           {
-            select ? <img src={uncheck} alt="check-uncheck" className='check-uncheck' /> : <img src={check} alt="check-uncheck" className='check-uncheck' />
+            select ? <LazyLoadImage effect="blur" src={uncheck} alt="check-uncheck" className='check-uncheck' /> : <LazyLoadImage effect="blur" src={check} alt="check-uncheck" className='check-uncheck' />
           }
 
         </span>
-        <img src={product.product_img?product.product_img:productDefalutImage} alt="" />
+        <LazyLoadImage effect="blur" src={product.product_img?product.product_img:productDefalutImage} alt="" />
         <span>{product.product_name}</span>
         <p>&#x20a8; <span>{product.product_price}</span></p>
       </div>

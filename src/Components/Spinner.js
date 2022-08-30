@@ -1,11 +1,12 @@
 import React from 'react'
-import loading from  "../Images/Preloader.gif";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import loading from  "../Images/preloader.mp4";
 
 function Spinner() {
   return (
     <>
-    <center><LazyLoadImage   src={loading} width={100} height={100} alt="loading" /></center>
+ <div>
+      <video src={loading} autoPlay loop muted playsInline className='spinner'></video>
+      </div>
     </>
   )
 }

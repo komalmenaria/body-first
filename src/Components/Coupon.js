@@ -14,7 +14,7 @@ function Coupon() {
     return (
         <>
             <div className="coupon-page">
-                <div className="coupon">
+                <div className="coupon" data-aos="fade-up" >
                     <h1>Your Coupon Number</h1>
                     <span>{coupon}</span>
                 </div>

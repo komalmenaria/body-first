@@ -13,7 +13,7 @@ function Categories() {
     })();
   }, [dispatch]);
   return (
-    <div className="categories-section">
+    <div className="categories-section" data-aos="zoom-in">
       <h1>Choose Your Category</h1>
 
       <div className="categories">

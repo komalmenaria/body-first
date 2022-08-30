@@ -17,7 +17,7 @@ function Subcategories() {
   }, []);
   return (
     <>
-      <div className="subcategories-section">
+      <div className="subcategories-section" data-aos="zoom-in">
         <div className="subcategories">
           <h1>Weight Management</h1>
 
