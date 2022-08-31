@@ -1240,10 +1240,3 @@ accent-color:#36fa16;
     margin: auto;
     width: 100%;
   }
- 
-
-  .admin-product{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }

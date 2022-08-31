@@ -3,6 +3,7 @@ import axios from "axios";
 import List from "./List";
 import config from "../../Config";
 import Details from "./Details";
+import Addproduct from "./Addproduct";
 
 const Products = () => {
   const [productlist, setProductList] = useState([]);
@@ -76,8 +77,22 @@ try {
   }, []);
   return (
     <>
-      <div className="admin-product">
-        <div className="left">
+   <div className="container py-2 ">
+<Addproduct handleFileInputChange={handleFileInputChange} setname={setname} setprice={setprice} createproduct={createproduct} />
+</div>
+      <div className="container d-flex">
+      
+        <div className="py-2">
+        <table class="table table-bordered table-hover ">
+    <thead>
+      <tr>
+        <th  className="table-cell-padding-x px-5"  scope="col">ID</th>
+        <th  className="table-cell-padding-x px-5" scope="col">Product Name</th>
+        <th className="table-cell-padding-x px-5"  scope="col">Status</th>
+             
+      </tr>
+    </thead>
+    <tbody >
           {productlist.length
             ? productlist.map((product, index) => {
                 return (
@@ -85,98 +100,16 @@ try {
                 );
               })
             : "Product Not found"}
+             </tbody>
+</table>
         </div>
         <div className="right">
           {detailproduct && <Details product={detailproduct} changestatus={changestatus} />}
         </div>
-        <div>
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Add Product
-          </button>
-
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Modal title
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <form class="row g-3">
-                    <div class="col-12">
-                      <label for="inputAddress" class="form-label">
-                        Product Name
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="inputAddress"
-                        placeholder="Product Name"
-                        onChange={(e)=>  {setname(e.target.value)}}
-                      />
-                    </div>
-                    <div class="col-12">
-                      <label for="inputAddress2" class="form-label">
-                        Product Price
-                      </label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="inputAddress2"
-                        placeholder="Product Price"
-                        onChange={(e)=>  {setprice(e.target.value)}}
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label for="inputCity" class="form-label">
-                        Product Image
-                      </label>
-                      <input
-                        type="file"
-                        class="form-control"
-                        id="inputCity"
-                        accept="image/*"
-              onChange={handleFileInputChange}
-                      />
-                    </div>
-
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary" onClick={createproduct}>
-                    Save changes
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
+ 
+      
     </>
   );
 };

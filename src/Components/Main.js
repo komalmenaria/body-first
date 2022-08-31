@@ -56,7 +56,7 @@ function Main() {
         />
         <Route
          exact
-         path="/admin/Product"
+         path="/admin/product"
          element={<Products />}
         />
         <Route
