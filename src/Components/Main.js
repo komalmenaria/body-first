@@ -13,7 +13,7 @@ import { Route, Routes } from "react-router-dom";
 // import Coupon from "./Coupon";
 // import Catdesc from "./Catdesc";
 // import Openproduct from "./Openproduct";
-
+import Subcategories from "../admin/Subcategory/Subcategories";
 import Products from "../admin/Products/Products";
 import Spinner from "./Spinner";
 import Navbar from "./Navbar";
@@ -54,11 +54,7 @@ function Main() {
             </React.Suspense>
           }
         />
-        <Route
-         exact
-         path="/admin/product"
-         element={<Products />}
-        />
+        
         <Route
           exact
           path="/verification"
@@ -148,6 +144,19 @@ function Main() {
               <LazyOpenproduct />
             </React.Suspense>
           }
+        />
+
+
+        {/* admin panel routes  */}
+        <Route
+         exact
+         path="/admin/product"
+         element={<Products />}
+        />
+        <Route
+         exact
+         path="/admin/subcategories"
+         element={<Subcategories />}
         />
       </Routes>
     </>
