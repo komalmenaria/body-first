@@ -83,7 +83,7 @@ try {
       <div className="container d-flex">
       
         <div className="py-2">
-        <table class="table table-bordered table-hover ">
+        <table className="table table-bordered table-hover ">
     <thead>
       <tr>
         <th  className="table-cell-padding-x px-5"  scope="col">ID</th>

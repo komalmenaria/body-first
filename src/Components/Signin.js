@@ -59,7 +59,7 @@ function Signin() {
           <h1>SIGN IN</h1>
           <input data-aos="fade-right" data-aos-duration="3000" type="text" name={user_name} placeholder="Name"  className="sign-input username" required onChange={(e)=>setUser_name(e.target.value)} />
           <input data-aos="fade-right" data-aos-duration="3000" type="text" name={user_phone} placeholder="Phone Number" className="sign-input userphone" required onChange={(e)=>setUser_phone(e.target.value)}  />
-           <label className="check-privacy-label" htmlFor="privacy">
+           <label className="check-privacy-label" htmlhtmlFor="privacy">
             <input type="checkbox" id="privacy" name="privacy" value={is_privacy} className="checkbox" onChange={(e)=> setIs_privacy(!is_privacy)}  />
                <p>By Check this you agree to our <span>Privacy policy </span>
               and <span>Terms of services</span>.</p>

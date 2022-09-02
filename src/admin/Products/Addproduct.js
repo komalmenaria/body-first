@@ -16,7 +16,7 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
         <div
           className="modal fade"
           id="exampleModal"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
@@ -36,7 +36,7 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
               <div className="modal-body">
                 <form className="row g-3">
                   <div className="col-12">
-                    <label for="inputAddress" className="form-label">
+                    <label htmlFor="inputAddress" className="form-label">
                       Product Name
                     </label>
                     <input
@@ -49,7 +49,7 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
                     />
                   </div>
                   <div className="col-12">
-                    <label for="inputAddress2" className="form-label">
+                    <label htmlFor="inputAddress2" className="form-label">
                       Product Price
                     </label>
                     <input
@@ -62,7 +62,7 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label for="inputCity" className="form-label">
+                    <label htmlFor="inputCity" className="form-label">
                       Product Image
                     </label>
                     <input
