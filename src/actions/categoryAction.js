@@ -1,20 +1,20 @@
 import axios from "axios"
 
 import Config from "../Config"
-import { GET_CATEGORY, GET_QUESTION, GET_PRODUCTS ,ADD_TO_CART,CHECKOUT,GET_COUPON,SET_ANSWERS} from '../Constant'
+import { GET_CATEGORY, GET_QUESTION, GET_PRODUCTS, ADD_TO_CART, CHECKOUT, GET_COUPON, SET_ANSWERS } from '../Constant'
 
 export const getCategory = () => async (dispatch) => {
     let user = localStorage.getItem('user')
-let token
-if (user) {
-    user = JSON.parse(user)
-    token = user.token
-}
-let config = {
-    headers: {
-        token
+    let token
+    if (user) {
+        user = JSON.parse(user)
+        token = user.token
     }
-}
+    let config = {
+        headers: {
+            token
+        }
+    }
     return new Promise(async (resolve, resject) => {
 
         try {
@@ -42,16 +42,16 @@ let config = {
 
 export const getQuestions = (body) => async (dispatch) => {
     let user = localStorage.getItem('user')
-let token
-if (user) {
-    user = JSON.parse(user)
-    token = user.token
-}
-let config = {
-    headers: {
-        token
+    let token
+    if (user) {
+        user = JSON.parse(user)
+        token = user.token
     }
-}
+    let config = {
+        headers: {
+            token
+        }
+    }
     return new Promise(async (resolve, reject) => {
         try {
             dispatch({
@@ -75,19 +75,19 @@ let config = {
 }
 
 
- 
+
 export const getProducts = (body) => async (dispatch) => {
     let user = localStorage.getItem('user')
-let token
-if (user) {
-    user = JSON.parse(user)
-    token = user.token
-}
-let config = {
-    headers: {
-        token
+    let token
+    if (user) {
+        user = JSON.parse(user)
+        token = user.token
     }
-}
+    let config = {
+        headers: {
+            token
+        }
+    }
     return new Promise(async (resolve, reject) => {
         try {
             dispatch({
@@ -110,11 +110,11 @@ let config = {
     })
 }
 
-export const addToCart=(body)=>async (dispatch)=>{
-    return new Promise( async(resolve,reject)=>{
+export const addToCart = (body) => async (dispatch) => {
+    return new Promise(async (resolve, reject) => {
         try {
-         
-            
+
+
             dispatch({
                 type: ADD_TO_CART + "SUCCESS",
                 payload: body
@@ -130,11 +130,11 @@ export const addToCart=(body)=>async (dispatch)=>{
     })
 }
 
-export const addToCheckout=(body)=>async (dispatch)=>{
-    return new Promise( async(resolve,reject)=>{
+export const addToCheckout = (body) => async (dispatch) => {
+    return new Promise(async (resolve, reject) => {
         try {
-         
-            
+
+
             dispatch({
                 type: CHECKOUT + "SUCCESS",
                 payload: body
@@ -149,32 +149,32 @@ export const addToCheckout=(body)=>async (dispatch)=>{
         }
     })
 }
-export const getCoupon=(body)=>async (dispatch)=>{
+export const getCoupon = (body) => async (dispatch) => {
     let user = localStorage.getItem('user')
-let token
-if (user) {
-    user = JSON.parse(user)
-    token = user.token
-}
-let config = {
-    headers: {
-        token
+    let token
+    if (user) {
+        user = JSON.parse(user)
+        token = user.token
     }
-}
-    return new Promise( async(resolve,reject)=>{
+    let config = {
+        headers: {
+            token
+        }
+    }
+    return new Promise(async (resolve, reject) => {
         try {
-         
-            
+
+
             dispatch({
                 type: GET_COUPON + "REQUEST",
                 payload: body
             })
-            let { data } = await axios.post(`${Config.BASE_URL}${Config.GET_COUPON}`, body,config)
-            
-                dispatch({
-                    type: GET_COUPON + "SUCCESS",
-                    payload: data.data.coupon
-                })
+            let { data } = await axios.post(`${Config.BASE_URL}${Config.GET_COUPON}`, body, config)
+
+            dispatch({
+                type: GET_COUPON + "SUCCESS",
+                payload: data.data.coupon
+            })
             resolve(body)
         } catch (error) {
             dispatch({
@@ -183,17 +183,17 @@ let config = {
             })
             reject(error)
         }
-    }) 
+    })
 }
 
 
 
 
-export const setAnswers=(body)=>async (dispatch)=>{
-    return new Promise( async(resolve,reject)=>{
+export const setAnswers = (body) => async (dispatch) => {
+    return new Promise(async (resolve, reject) => {
         try {
-         
-            
+
+
             dispatch({
                 type: SET_ANSWERS + "SUCCESS",
                 payload: body

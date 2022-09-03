@@ -10,18 +10,6 @@ const Subcategories = () => {
     const [subcategorylist, setsubcategorylist] = useState([]);
     const [subcatdetails, setsubcatdetails] = useState(false)
 
-
-
-
-
-
-
-
-
-
-
-
-
     async function changestatus(id, status) {
         try {
             await axios.patch(`${config.BASE_URL}subcat/${id}`, {

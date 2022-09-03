@@ -14,21 +14,22 @@ import { Route, Routes } from "react-router-dom";
 // import Catdesc from "./Catdesc";
 // import Openproduct from "./Openproduct";
 import Subcategories from "../admin/Subcategory/Subcategories";
+import Categories from "../admin/Category/Categories";
 import Products from "../admin/Products/Products";
 import Spinner from "./Spinner";
 import Navbar from "./Navbar";
 const LazyHome = React.lazy(() => import("./Home"));
-const LazySignin = React.lazy(() => import("./Signin")); 
-const LazyVerification = React.lazy(() => import("./Verification"));  
-const LazyGenderage = React.lazy(() => import("./Genderage")); 
-const LazyCategories = React.lazy(() => import("./Category/Categories")); 
-const LazySubcategories = React.lazy(() => import("./Category/Subcategories"));  
-const LazyForm = React.lazy(() => import("./MultiStepForm/Form"));  
-const LazyProducts = React.lazy(() => import("./Product/Products.js"));  
-const LazyCart = React.lazy(() => import("./Cart")); 
-const LazyCoupon = React.lazy(() => import("./Coupon")); 
-const LazyCatdesc = React.lazy(() => import("./Catdesc"));  
-const LazyOpenproduct = React.lazy(() => import("./Openproduct"));  
+const LazySignin = React.lazy(() => import("./Signin"));
+const LazyVerification = React.lazy(() => import("./Verification"));
+const LazyGenderage = React.lazy(() => import("./Genderage"));
+const LazyCategories = React.lazy(() => import("./Category/Categories"));
+const LazySubcategories = React.lazy(() => import("./Category/Subcategories"));
+const LazyForm = React.lazy(() => import("./MultiStepForm/Form"));
+const LazyProducts = React.lazy(() => import("./Product/Products.js"));
+const LazyCart = React.lazy(() => import("./Cart"));
+const LazyCoupon = React.lazy(() => import("./Coupon"));
+const LazyCatdesc = React.lazy(() => import("./Catdesc"));
+const LazyOpenproduct = React.lazy(() => import("./Openproduct"));
 
 function Main() {
   return (
@@ -54,7 +55,7 @@ function Main() {
             </React.Suspense>
           }
         />
-        
+
         <Route
           exact
           path="/verification"
@@ -149,14 +150,19 @@ function Main() {
 
         {/* admin panel routes  */}
         <Route
-         exact
-         path="/admin/product"
-         element={<Products />}
+          exact
+          path="/admin/product"
+          element={<Products />}
         />
         <Route
-         exact
-         path="/admin/subcategories"
-         element={<Subcategories />}
+          exact
+          path="/admin/subcategories"
+          element={<Subcategories />}
+        />
+        <Route
+          exact
+          path="/admin/categories"
+          element={<Categories />}
         />
       </Routes>
     </>
