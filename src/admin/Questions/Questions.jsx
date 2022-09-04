@@ -38,7 +38,7 @@ const Questions = () => {
   return (
     <div>
       <div className="container py-2 ">
-      <AddQuestion/>
+      <AddQuestion getAllQuestion={getAllQuestion} />
       </div>
       <div className="container d-flex ">
         <div className="py-2">

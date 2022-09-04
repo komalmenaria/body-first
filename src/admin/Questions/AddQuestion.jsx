@@ -3,7 +3,7 @@ import axios from "axios";
 import Config from "../../Config";
 import Select from "react-select";
 
-const AddQuestion = () => {
+const AddQuestion = ({getAllQuestion}) => {
   const [type, setType] = useState("");
   const [catgeoryList, setCatgeoryList] = useState([]);
   const [subCatgeoryList, setSubCatgeoryList] = useState([]);
@@ -48,6 +48,7 @@ const AddQuestion = () => {
       console.log(body)
       await axios.post(`${Config.BASE_URL}questions`,body);
       document.getElementById("CategoryModal_Close").click();
+      getAllQuestion()
       document.getElementById("ADD_QUESTION_FORM").reset();
       setServiceList([{ option: "", products_ids: [] },])
     } catch (error) {
