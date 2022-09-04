@@ -14,6 +14,7 @@ import { Route, Routes } from "react-router-dom";
 // import Catdesc from "./Catdesc";
 // import Openproduct from "./Openproduct";
 import Subcategories from "../admin/Subcategory/Subcategories";
+import Questions from "../admin/Questions/Questions";
 import Categories from "../admin/Category/Categories";
 import Products from "../admin/Products/Products";
 import Spinner from "./Spinner";
@@ -164,6 +165,12 @@ function Main() {
           path="/admin/categories"
           element={<Categories />}
         />
+                <Route
+          exact
+          path="/admin/questions"
+          element={<Questions />}
+        />
+        
       </Routes>
     </>
   );
