@@ -13,6 +13,8 @@ import { Route, Routes } from "react-router-dom";
 // import Coupon from "./Coupon";
 // import Catdesc from "./Catdesc";
 // import Openproduct from "./Openproduct";
+import Dashboard from "../admin/Login/Dashboard";
+import Login from "../admin/Login/Login";
 import Subcategories from "../admin/Subcategory/Subcategories";
 import Questions from "../admin/Questions/Questions";
 import Categories from "../admin/Category/Categories";
@@ -165,12 +167,22 @@ function Main() {
           path="/admin/categories"
           element={<Categories />}
         />
-                <Route
+        <Route
           exact
           path="/admin/questions"
           element={<Questions />}
         />
-        
+        <Route
+          exact
+          path="/admin/login"
+          element={<Login />}
+        />
+        <Route
+          exact
+          path="/admin/dashboard"
+          element={<Dashboard />}
+        />
+
       </Routes>
     </>
   );
