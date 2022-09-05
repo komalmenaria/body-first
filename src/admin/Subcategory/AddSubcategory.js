@@ -13,19 +13,17 @@ const AddSubcategory = ({getallsubcategories}) => {
   const [subcatpromo, setsubcatpromo] = useState('')
 
   
-  async function createsubcategory() {
+  async function createsubcategory(event) {
+    event.preventDefault();
     try {
-        console.log(subcatename, subcatdesc, subcaticon, subcatproduct, subcatposter, subcatpromo)
-        await axios.post(`${config.BASE_URL}subcat`, {
-            subcat_name: subcatename,
-            subcat_desc: subcatdesc,
-            subcat_img: subcaticon,
-            product_img: subcatproduct,
-            poster_img: subcatposter,
-            promo_img: subcatpromo,
-        });
+      let form_data=new FormData(document.getElementById("subcategory_add"))
+       
+        await axios.post(`${config.BASE_URL}subcat`,form_data);
         getallsubcategories();
+        document.getElementById("subcategory_add").reset();
+        alert("Success")
     } catch (error) {
+      console.log(error)
         alert(error.message)
     }
 }
@@ -102,7 +100,7 @@ const AddSubcategory = ({getallsubcategories}) => {
                 ></button>
               </div>
               <div className="modal-body">
-                <form className="row g-3">
+                <form className="row g-3" id='subcategory_add' onSubmit={createsubcategory}>
                   <div className="col-12">
                     <label htmlFor="inputAddress" className="form-label">
                     Subcategory Name
@@ -110,7 +108,10 @@ const AddSubcategory = ({getallsubcategories}) => {
                     <input
                       type="text"
                       className="form-control"
+                      name='subcat_name'
                       id="inputAddress"
+                      
+                      required
                       onChange={(e) => {
                         setsubcatename(e.target.value);
                       }}
@@ -123,7 +124,9 @@ const AddSubcategory = ({getallsubcategories}) => {
                     <input
                       type="text"
                       className="form-control"
+                      name='subcat_desc'
                       id="inputAddress2"
+                      required
                       onChange={(e) => {
                         setsubcatdesc(e.target.value);
                       }}
@@ -136,6 +139,8 @@ const AddSubcategory = ({getallsubcategories}) => {
                     <input
                       type="file"
                       className="form-control"
+                      name='subcat_img'
+                      required
                       id="inputCity"
                       accept="image/*"
                       onChange={handleIcon}
@@ -148,6 +153,8 @@ const AddSubcategory = ({getallsubcategories}) => {
                     <input
                       type="file"
                       className="form-control"
+                      name='product_img'
+                      required
                       id="inputCity"
                       accept="image/*"
                       onChange={handleProduct}
@@ -161,6 +168,8 @@ const AddSubcategory = ({getallsubcategories}) => {
                       type="file"
                       className="form-control"
                       id="inputCity"
+                      required
+                      name='poster_img'
                       accept="image/*"
                       onChange={handlePoster}
                     />
@@ -172,14 +181,14 @@ const AddSubcategory = ({getallsubcategories}) => {
                     <input
                       type="file"
                       className="form-control"
+                      name='promo_img'
                       id="inputCity"
+                      required
                       accept="image/*"
                       onChange={handlePromo}
                     />
                   </div>
-                </form>
-              </div>
-              <div className="modal-footer">
+                  <div className="modal-footer">
                 <button
                   type="button"
                   className="btn btn-secondary"
@@ -188,13 +197,16 @@ const AddSubcategory = ({getallsubcategories}) => {
                   Close
                 </button>
                 <button
-                  type="button"
+                  type="submit"
                   className="btn btn-primary"
-                  onClick={createsubcategory}
+                 
                 >
                   Save changes
                 </button>
               </div>
+                </form>
+              </div>
+       
             </div>
           </div>
         </div>

@@ -39,15 +39,8 @@ try {
 
   async function createproduct(){
 try {
-  let description = "hello"
-    console.log(name , price , image)
-    await axios.post(`${config.BASE_URL}product`,{
-      product_name : name,
-      product_desc : description,
-      product_img : image,
-      product_price : price
-
-    });
+    let form_data=new FormData(document.getElementById("add_product_form"))
+    await axios.post(`${config.BASE_URL}product`,form_data);
     getallproduct();
     
 } catch (error) {

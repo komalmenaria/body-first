@@ -64,20 +64,18 @@ const AddCategory = ({ getallcategories }) => {
       }
   
       let body = {
-        cat_name: categoryName,
-        cat_desc: categoryDesc,
-        cat_img: categoryIcon,
-        product_img: categoryProduct,
-        poster_img: categoryPoster,
-        promo_img: categoryPromo,
-        gender: categoryGender,
+
         age_from: from_age,
         age_to: to_age
       };
+      let form_data=new FormData(document.getElementById("add_category_form"))
+
       if(multipleSelect.length){
-        body.subcat_ids=multipleSelect.map((ms) => ms.value)
+        form_data.append('subcat_ids',multipleSelect.map((ms) => ms.value).toString())
       }
-      await axios.post(`${Config.BASE_URL}category`, body);
+      form_data.append('age_from',from_age)
+      form_data.append('age_to',to_age)
+      await axios.post(`${Config.BASE_URL}category`, form_data);
       getallcategories();
      
       document.getElementById("CategoryModal_Close").click();
@@ -180,6 +178,7 @@ const AddCategory = ({ getallcategories }) => {
                     type="text"
                     className="form-control"
                     id="inputAddress"
+                    name="cat_name"
                     onChange={(e) => {
                       setCategoryName(e.target.value);
                     }}
@@ -192,6 +191,7 @@ const AddCategory = ({ getallcategories }) => {
                   <input
                     required
                     type="text"
+                    name="cat_desc"
                     className="form-control"
                     id="inputAddress2"
                     onChange={(e) => {
@@ -234,6 +234,7 @@ const AddCategory = ({ getallcategories }) => {
                   <input
                     required
                     type="file"
+                    name="cat_img"
                     className="form-control"
                     id="inputCity"
                     accept="image/*"
@@ -249,6 +250,7 @@ const AddCategory = ({ getallcategories }) => {
                     type="file"
                     className="form-control"
                     id="inputCity"
+                    name="product_img"
                     accept="image/*"
                     onChange={handleProduct}
                   />
@@ -260,6 +262,7 @@ const AddCategory = ({ getallcategories }) => {
                   <input
                     required
                     type="file"
+                    name="poster_img"
                     className="form-control"
                     id="inputCity"
                     accept="image/*"
@@ -274,6 +277,7 @@ const AddCategory = ({ getallcategories }) => {
                     required
                     type="file"
                     className="form-control"
+                    name="promo_img"
                     id="inputCity"
                     accept="image/*"
                     onChange={handlePromo}
@@ -284,9 +288,10 @@ const AddCategory = ({ getallcategories }) => {
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="exampleRadios"
+                     
                       id="exampleRadios1"
                       value="1"
+                      name="gender"
                       checked
                       required
                       onChange={(e) => {
@@ -303,7 +308,7 @@ const AddCategory = ({ getallcategories }) => {
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="exampleRadios"
+                      name="gender"
                       id="exampleRadios2"
                       value="0"
                       required

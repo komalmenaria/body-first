@@ -34,7 +34,7 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
                 ></button>
               </div>
               <div className="modal-body">
-                <form className="row g-3">
+                <form className="row g-3" id="add_product_form">
                   <div className="col-12">
                     <label htmlFor="inputAddress" className="form-label">
                       Product Name
@@ -43,6 +43,7 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
                       type="text"
                       className="form-control"
                       id="inputAddress"
+                      name="product_name"
                       onChange={(e) => {
                         setname(e.target.value);
                       }}
@@ -55,11 +56,13 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
                     <input
                       type="number"
                       className="form-control"
+                      name="product_price"
                       id="inputAddress2"
                       onChange={(e) => {
                         setprice(e.target.value);
                       }}
                     />
+                    <input type="hidden" name="product_desc" value={"DEfalut desc"} id="" />
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="inputCity" className="form-label">
@@ -70,7 +73,8 @@ const Addproduct = ({handleFileInputChange,setname,setprice,createproduct}) => {
                       className="form-control"
                       id="inputCity"
                       accept="image/*"
-                      onChange={handleFileInputChange}
+                      name="product_img"
+                      // onChange={handleFileInputChange}
                     />
                   </div>
                 </form>
