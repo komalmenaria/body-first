@@ -1,11 +1,12 @@
 import React, { useState,useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Navigate } from "react-router-dom";
+import { useAlert } from 'react-alert'
 
 const Dashboard = () => {
   const token = localStorage.getItem("token");
   // console.log(token);
   const [loggedin, setloggedin] = useState(true);
-
+const navigation = useNavigate()
 
   
   
@@ -34,9 +35,18 @@ const Dashboard = () => {
     navigate("/admin/categories");
   }
 
+  const alert = useAlert()
+  async function handleLogOut(){
+  console.log("logged out");
+  await localStorage.clear();
+  alert.success("Logout Successfully");
+  navigation('/admin/login');
+  }
+
   return (
     <>
       {loggedin ? (
+        <div className="d-flex justify-content-center flex-column">
         <div className="container d-flex justify-content-center flex-wrap p-4">
           <div
             className="card text-bg-success m-2 p-4"
@@ -90,12 +100,13 @@ const Dashboard = () => {
               </h4>
             </div>
           </div>
-          <button onClick={()=>{
-  localStorage.clear();
-}} >Logout</button>
+        </div>
+        <center>
+        <button type="button" style={{ color: "white" ,padding:"0px !important" }} className="btn btn-danger text-center"  onClick={handleLogOut} >Logout</button>
+        </center>
         </div>
       ) : (
-        "sorry"
+        <Navigate to="/admin/login" />
       )}
 
 
