@@ -9,7 +9,7 @@ const Questions = () => {
   const [questionDetails, setquestionDetails] = useState(false);
   async function getAllQuestion (){
     return new Promise(async (resolve, reject) => {
-      let data = await axios.get(`${Config.BASE_URL}questions`);
+      let data = await axios.post(`${Config.BASE_URL}questions`);
       console.log(data);
       setquestionList(data.data.data);
       resolve(data);

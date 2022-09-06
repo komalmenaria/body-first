@@ -14,14 +14,16 @@ const AddCategory = ({ getallcategories }) => {
   const [categoryGender, setcategoryGender] = useState("1");
   const [categoryAge, setCategoryAge] = useState("");
   const [subCategories, setSubCategories] = useState([]);
+  const [multiage, setmultiage] = useState([]);
   // gender
   const createcategory = async (event) => {
 
     try {
+      console.log(multiage)
       event.preventDefault();
-      console.log(multipleSelect, categoryAge);
+      
   
-      if (categoryAge == "NOT_SELECTED" || !categoryAge) {
+      if (!multiage.length) {
         alert("Please Select Age");
         return;
       }
@@ -29,55 +31,16 @@ const AddCategory = ({ getallcategories }) => {
      
       
   
-      let from_age, to_age;
-      switch (categoryAge) {
-        case "<18":
-          from_age = 18;
-          to_age = 60;
-          break;
-        case "18-29":
-          from_age = 18;
-          to_age = 29;
-          break;
-        case "20-29":
-          from_age = 20;
-          to_age = 29;
-          break;
-        case "30-39":
-          from_age = 30;
-          to_age = 39;
-          break;
-        case "40-49":
-          from_age = 40;
-          to_age = 49;
-          break;
-        case "50-59":
-          from_age = 50;
-          to_age = 59;
-          break;
-        case "60+":
-          from_age = null;
-          to_age = 60;
-          break;
-        default:
-          return null;
-      }
+     
   
-      let body = {
-
-        age_from: from_age,
-        age_to: to_age
-      };
       let form_data=new FormData(document.getElementById("add_category_form"))
 
       if(multipleSelect.length){
         form_data.append('subcat_ids',multipleSelect.map((ms) => ms.value).toString())
       }
-      form_data.append('age_from',from_age)
-      form_data.append('age_to',to_age)
+      form_data.append('age_ids',multiage.map((ms) => ms.value).toString())
       await axios.post(`${Config.BASE_URL}category`, form_data);
       getallcategories();
-     
       document.getElementById("CategoryModal_Close").click();
       document.getElementById("add_category_form").reset();
       alert("Success");
@@ -345,7 +308,54 @@ const AddCategory = ({ getallcategories }) => {
                 </div>
 
                 <div className="form-check">
-                  <select
+                <Select
+                    className="react-select info"
+                    classNamePrefix="react-select"
+                    placeholder="Choose Age"
+                    name="multipleSelect"
+                    closeMenuOnSelect={false}
+                    isMulti
+                    value={multiage}
+                    onChange={(value) => setmultiage(value)}
+                    options={[
+                      {
+                        value: "",
+                        label: "Choose Age",
+                        isDisabled: true,
+                      },
+                      {
+                        value: "1",
+                        label: "<18",
+                      },
+                      {
+                        value: "2",
+                        label: "18-29",
+                      },
+                      {
+                        value: "3",
+                        label: "20-29",
+                      },
+                      {
+                        value: "4",
+                        label: "30-39",
+                      },
+                      
+                      {
+                        value: "5",
+                        label: "40-49",
+                      },
+                      {
+                        value: "6",
+                        label: "50-59",
+                      },
+                      {
+                        value: "7",
+                        label: "60+",
+                      },
+               
+                      ]}
+                  />
+                  {/* <select
                     class="form-select"
                     id="exampleRadios3"
                     aria-label="Default select example"
@@ -363,7 +373,8 @@ const AddCategory = ({ getallcategories }) => {
                     <option value="30-39">30-39 </option>
                     <option value="50-59">50-59 </option>
                     <option value="60+">60+ </option>
-                  </select>
+                  </select> */}
+
                   <label class="form-check-label" for="exampleRadios3">
                     Age
                   </label>

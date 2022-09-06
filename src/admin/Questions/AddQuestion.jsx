@@ -20,7 +20,7 @@ const AddQuestion = ({getAllQuestion}) => {
     event.preventDefault();
 
     try {
-      let array=serviceList
+      
       if (!type) {
         alert("Please select Type");
         return;
@@ -34,19 +34,10 @@ const AddQuestion = ({getAllQuestion}) => {
       let body={question:question}
       if(cat)body.cat_id=cat
       if(subcat)body.subcat_id=subcat
-
-      if(serviceList.length){
-       
-        for (let index = 0; index < array.length; index++) {
-          const element = array[index];
-          element.products_ids=element.products_ids.map((ms) => ms.value)
-          
-        }
-      }
-      body.answers=array
+      body.answers=serviceList
 
       console.log(body)
-      await axios.post(`${Config.BASE_URL}questions`,body);
+      await axios.post(`${Config.BASE_URL}questions/create`,body);
       document.getElementById("CategoryModal_Close").click();
       getAllQuestion()
       document.getElementById("ADD_QUESTION_FORM").reset();

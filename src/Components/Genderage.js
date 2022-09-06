@@ -13,7 +13,7 @@ function Genderage() {
     console.log("Handling Form")
     try {
       e.preventDefault()
-      let from_age, to_age;
+       
       if (!age) {
         alert.error("Please select Age")
         return
@@ -23,44 +23,12 @@ function Genderage() {
         return
       }
       console.log(age)
-      switch (age) {
-        case "<18":
-          from_age = 18
-          to_age=null
-          break;
-        case "18-29":
-          from_age = 18
-          to_age = 29
-          break;
-        case "20-29":
-          from_age = 20
-          to_age = 29
-          break;
-        case "30-39":
-          from_age = 30
-          to_age = 39
-          break;
-        case "40-49":
-          from_age = 40
-          to_age=49
-          break;
-          case "50-59":
-            from_age =50
-            to_age=59
-            break;
-          
-          case "60+":
-            from_age =null
-            to_age=60
-            break;
-        default:
-          return null
-      }
+  
       if(gender==="male"){
-        await dispatch(assingAgeAndGender({from_age,to_age,gender:1}))
+        await dispatch(assingAgeAndGender({age_id:age,gender:1}))
       }
       if(gender==="female"){
-        await dispatch(assingAgeAndGender({from_age,to_age,gender:0}))
+        await dispatch(assingAgeAndGender({age_id:age,gender:0}))
       }
   
        
@@ -90,13 +58,13 @@ function Genderage() {
           <div className="age-group">
             <span data-aos="flip-down">Select your Age </span>
             <fieldset className="select-age-group">
-              <input data-aos="zoom-in-up" name="age" type="radio" value="<18" className='select-age' label=' < 18' onChange={(e) => { setAge(e.target.value) }} />
-              <input data-aos="zoom-in-up" name="age" type="radio" value="18-29" className='select-age' label='18-29' onChange={(e) => { setAge(e.target.value) }} />
-              <input data-aos="zoom-in-up" name="age" type="radio" value="20-29" className='select-age' label='20-29' onChange={(e) => { setAge(e.target.value) }} />
-              <input data-aos="zoom-in-up" name="age" type="radio" value="30-39" className='select-age' label='30-39' onChange={(e) => { setAge(e.target.value) }} />
-              <input data-aos="zoom-in-up" name="age" type="radio" value="40-49" className='select-age' label='40-49' onChange={(e) => { setAge(e.target.value) }} />
-              <input data-aos="zoom-in-up" name="age" type="radio" value="50-59" className='select-age' label='50-59' onChange={(e) => { setAge(e.target.value) }} />
-              <input data-aos="zoom-in-up" name="age" type="radio" value="60+" className='select-age' label='60 +' onChange={(e) => { setAge(e.target.value) }} />
+              <input data-aos="zoom-in-up" name="age" type="radio" value="1" className='select-age' label=' < 18' onChange={(e) => { setAge(e.target.value) }} />
+              <input data-aos="zoom-in-up" name="age" type="radio" value="2" className='select-age' label='18-29' onChange={(e) => { setAge(e.target.value) }} />
+              <input data-aos="zoom-in-up" name="age" type="radio" value="3" className='select-age' label='20-29' onChange={(e) => { setAge(e.target.value) }} />
+              <input data-aos="zoom-in-up" name="age" type="radio" value="4" className='select-age' label='30-39' onChange={(e) => { setAge(e.target.value) }} />
+              <input data-aos="zoom-in-up" name="age" type="radio" value="5" className='select-age' label='40-49' onChange={(e) => { setAge(e.target.value) }} />
+              <input data-aos="zoom-in-up" name="age" type="radio" value="6" className='select-age' label='50-59' onChange={(e) => { setAge(e.target.value) }} />
+              <input data-aos="zoom-in-up" name="age" type="radio" value="7" className='select-age' label='60 +' onChange={(e) => { setAge(e.target.value) }} />
             </fieldset>
 
           </div>
