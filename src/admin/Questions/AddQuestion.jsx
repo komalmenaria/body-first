@@ -160,6 +160,8 @@ const AddQuestion = ({getAllQuestion}) => {
                     aria-label="Default select example"
                     required
                     onChange={(e) => {
+                      setcat(null);
+                      setsubcat(null);
                       setType(e.target.value);
                     }}
                   >
