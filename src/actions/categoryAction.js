@@ -58,7 +58,7 @@ export const getQuestions = (body) => async (dispatch) => {
                 type: GET_QUESTION + "REQUEST"
             })
 
-            let { data } = await axios.post(`${Config.BASE_URL}${Config.GET_QUESTION}`, {...body,is_active:1}, config)
+            let { data } = await axios.post(`${Config.BASE_URL}${Config.GET_QUESTION}`, {...body,is_active:[1]}, config)
             dispatch({
                 type: GET_QUESTION + "SUCCESS",
                 payload: { questions: data.data, title: body.title }
