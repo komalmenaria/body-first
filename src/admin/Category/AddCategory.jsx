@@ -81,9 +81,11 @@ const AddCategory = ({ getallcategories }) => {
       document.getElementById("CategoryModal_Close").click();
       document.getElementById("add_category_form").reset();
       alert("Success");
+
     } catch (error) {
       alert(error.message);
     }
+   
   };
 
   const handleIcon = (e) => {
@@ -322,7 +324,26 @@ const AddCategory = ({ getallcategories }) => {
                       Female
                     </label>
                   </div>
+                  <div class="form-check col-md-6">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="exampleRadios2"
+                      value="2"
+                      required
+                      onChange={(e) => {
+                        if (e.target.checked) {
+                          setcategoryGender(e.target.value);
+                        }
+                      }}
+                    />
+                    <label class="form-check-label" for="exampleRadios2">
+                      Both
+                    </label>
+                  </div>
                 </div>
+
                 <div className="form-check">
                   <select
                     class="form-select"

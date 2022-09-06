@@ -151,7 +151,7 @@ function Main() {
         />
 
 
-        {/* admin panel routes  */}
+        {/* admin panel routes  */}        
         <Route
           exact
           path="/admin/product"
