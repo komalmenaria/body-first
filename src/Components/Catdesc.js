@@ -61,9 +61,10 @@ function Catdesc() {
       {cat_id ?
         <div className="Catdes-section" data-aos="zoom-in">
           <div className="desc-products" >
-            <Logo height={100} width={100} />
+            <Logo height={150} width={200} data-aos="zoom-in-up" />
             <LazyLoadImage
               effect="blur"
+              data-aos="zoom-in-up"
               className="desc-product-image"
               src={catObj?.product_img ? catObj.product_img : products}
               alt=""
@@ -75,7 +76,7 @@ function Catdesc() {
               Next
             </button>
             <div className="desc-text-poster">
-              <p > 
+              <p  data-aos="fade-left"> 
                 {catObj?.cat_desc}
               </p>
               <LazyLoadImage
@@ -84,30 +85,29 @@ function Catdesc() {
                 height={300}
                 src={catObj?.poster_img ? catObj.poster_img : poster}
                 alt=""
-                data-aos="zoom-in-up"
+                data-aos="fade-left"
               />
             </div>
           </div>
           <div className="product-promotion ">
             <LazyLoadImage
               effect="blur"
-              width={200}
-              height={300}
+            className="catdesc-promo-user"
               src={catObj?.promo_img ? catObj.promo_img : promot}
               alt=""
             />
 
-            <div className="promote-it"   >
-              <p>50+</p>
-              <span>Product</span>
+            <div data-aos="fade-left" className="promote-it"   >
+              <p >50+</p>
+              <span >Product</span>
             </div>
-            <div className="promote-it"  >
-              <p>2000+</p>
-              <span>Customer</span>
+            <div data-aos="fade-left" className="promote-it"  >
+              <p >2000+</p>
+              <span >Customer</span>
             </div>
-            <div className="promote-it"  >
-              <p>3000+</p>
-              <span>Positive feedback</span>
+            <div data-aos="fade-left" className="promote-it"  >
+              <p >3000+</p>
+              <span >Positive feedback</span>
             </div>
           </div>
         </div> : 

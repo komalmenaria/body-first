@@ -22,7 +22,7 @@ const navigation = useNavigate()
   function handleaddproduct() {
     navigate("/admin/product");
   }
-  function handlesubmitcoupan() {
+  function handlesubmitcoupon() {
     navigate("/admin/product");
   }
   function handleaddquestion() {
@@ -94,9 +94,9 @@ const navigation = useNavigate()
           <div
             className="card text-bg-secondary m-2 p-4"
             style={{ width: "18rem", cursor: "pointer" }}>
-            <div className="card-body" onClick={handlesubmitcoupan}>
+            <div className="card-body" onClick={handlesubmitcoupon}>
               <h4 className="card-title text-center" style={{ color: "white" }}>
-                Coupan
+                Coupon
               </h4>
             </div>
           </div>

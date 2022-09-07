@@ -37,7 +37,7 @@ const handleCatgeoryyClick =async(cat_id,title)=>{
     <button  data-aos="flip-down" className="single-category" onClick={()=>{
       handleCatgeoryyClick(category.cat_id,category.cat_name)
     }}>
-        <LazyLoadImage effect="blur" id="single-cat-img" src={category.cat_img} alt="" />
+        <LazyLoadImage  effect="blur" id="single-cat-img" src={category.cat_img} alt="" />
 
         <span>{category.cat_name}</span>
     </button>
