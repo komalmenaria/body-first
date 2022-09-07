@@ -89,7 +89,7 @@ function Singlewishlistitem({ product }) {
           }
 
         </span>
-        <LazyLoadImage effect="blur" src={product.product_img?product.product_img:productDefalutImage} alt="" />
+        <LazyLoadImage effect="blur" src={product.product_img?product.product_img:productDefalutImage} width={160}  alt="" />
         <span>{product.product_name}</span>
         <p>&#x20a8; <span>{product.product_price}</span></p>
       </div>

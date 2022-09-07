@@ -80,7 +80,8 @@ function Catdesc() {
               </p>
               <LazyLoadImage
                 effect="blur"
-                className="desc-product-image"
+                width={300}
+                height={300}
                 src={catObj?.poster_img ? catObj.poster_img : poster}
                 alt=""
                 data-aos="zoom-in-up"
@@ -90,7 +91,8 @@ function Catdesc() {
           <div className="product-promotion ">
             <LazyLoadImage
               effect="blur"
-              className=" desc-product-image"
+              width={200}
+              height={300}
               src={catObj?.promo_img ? catObj.promo_img : promot}
               alt=""
             />
@@ -138,8 +140,8 @@ function Catdesc() {
         </div>
         <div className="product-promotion ">
           <LazyLoadImage
+          width={100}
             effect="blur"
-            className=" desc-product-image"
             src={subcatObj?.promo_img ? subcatObj.promo_img : promot}
             alt=""
           />
