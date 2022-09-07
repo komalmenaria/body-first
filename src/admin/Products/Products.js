@@ -73,7 +73,7 @@ try {
    <div className="container py-2 ">
 <Addproduct handleFileInputChange={handleFileInputChange} setname={setname} setprice={setprice} createproduct={createproduct} />
 </div>
-      <div className="container d-flex">
+      <div className="container d-flex ">
       
         <div className="py-2">
         <table className="table table-bordered table-hover ">

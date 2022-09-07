@@ -61,10 +61,9 @@ function Catdesc() {
       {cat_id ?
         <div className="Catdes-section" data-aos="zoom-in">
           <div className="desc-products" >
-            <Logo height={150} width={200} data-aos="zoom-in-up" />
+            <Logo height={150} width={200} />
             <LazyLoadImage
               effect="blur"
-              data-aos="zoom-in-up"
               className="desc-product-image"
               src={catObj?.product_img ? catObj.product_img : products}
               alt=""
@@ -72,11 +71,11 @@ function Catdesc() {
             />
           </div>
           <div className="desc-content">
-            <button type="button" className="desc-button" onClick={handleClick} data-aos="fade-down">
+            <button type="button" className="desc-button" onClick={handleClick} >
               Next
             </button>
             <div className="desc-text-poster">
-              <p  data-aos="fade-left"> 
+              <p > 
                 {catObj?.cat_desc}
               </p>
               <LazyLoadImage
@@ -85,7 +84,7 @@ function Catdesc() {
                 height={300}
                 src={catObj?.poster_img ? catObj.poster_img : poster}
                 alt=""
-                data-aos="fade-left"
+               
               />
             </div>
           </div>

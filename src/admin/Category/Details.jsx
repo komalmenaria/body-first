@@ -9,6 +9,8 @@ const Details = ({ category, changestatus }) => {
             <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
               <h5 className="card-text">Category Icon</h5>
               <img
+              width={150}
+              height={200}
                 src={category.cat_img}
                 className="card-img-top img-fluid img-thumbnail"
                 alt={category.cat_name}
@@ -17,6 +19,8 @@ const Details = ({ category, changestatus }) => {
             <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
               <h5 className="card-text">Product Image</h5>
               <img
+              width={150}
+              height={200}
                 src={category.product_img}
                 className="card-img-top img-fluid img-thumbnail"
                 alt={category.cat_name}
@@ -25,6 +29,8 @@ const Details = ({ category, changestatus }) => {
             <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
               <h5 className="card-text">Poster Image</h5>
               <img
+              width={150}
+              height={200}
                 src={category.poster_img}
                 className="card-img-top img-fluid img-thumbnail"
                 alt={category.cat_name}
@@ -33,6 +39,8 @@ const Details = ({ category, changestatus }) => {
             <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
               <h5 className="card-text">Promo Image</h5>
               <img
+              width={150}
+              height={200}
                 src={category.promo_img}
                 className="card-img-top img-fluid img-thumbnail"
                 alt={category.cat_name}
