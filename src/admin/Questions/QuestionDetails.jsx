@@ -3,19 +3,19 @@ import React from 'react'
 const QuestionDetails = ({question,changestatus}) => {
   return (
     <>
-        <div className="card position-fixed mx-5 my-2 px-3 ">
+        <div className="card mx-5 my-2 px-3 ">
         <h5 className="card-title ">
               Question : {question.questions_val}
             </h5>
              <br />
           {question?.answers?.length ? (
             <div> <h6><b>Options</b></h6>
-              <div className=" d-flex">
+              <div className=" d-flex flex-wrap">
                
                 {question?.answers.map((option) => {
                   return (
                     <>
-                      <span class="badge text-bg-primary mx-2">
+                      <span class="badge text-bg-primary m-2">
                         {option.answer_val}
                       </span>
 

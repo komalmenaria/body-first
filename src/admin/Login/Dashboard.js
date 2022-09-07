@@ -23,7 +23,7 @@ const navigation = useNavigate()
     navigate("/admin/product");
   }
   function handlesubmitcoupon() {
-    navigate("/admin/product");
+    navigate("/admin/coupon");
   }
   function handleaddquestion() {
     navigate("/admin/questions");

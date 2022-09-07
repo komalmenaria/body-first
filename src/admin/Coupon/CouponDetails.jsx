@@ -31,14 +31,14 @@ const CouponDetails = ({ cartDetails }) => {
           
               <div class="d-flex justify-content-between pt-2">
                 <p class="fw-bold mb-0">Order Details</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4">Total</span> $ {cart.cart_total}</p>
+                <p class="text-muted mb-0"><span class="fw-bold me-4">Total</span> &#x20a8;  {cart.cart_total}</p>
               </div>
   
         
   
               <div class="d-flex justify-content-between">
-                <p class="text-muted mb-0">order date : {cart.createdAt}</p>
-                <p class="text-muted mb-0"><span class="fw-bold me-4">Sub total </span>  ${cart.cart_sub_total}</p>
+                <p class="text-muted mb-0">Order Date : {cart.createdAt}</p>
+                <p class="text-muted mb-0"><span class="fw-bold me-4">Sub total </span>  &#x20a8; {cart.cart_sub_total}</p>
               </div>
   
               <div class="d-flex justify-content-between mb-5">
@@ -51,7 +51,7 @@ const CouponDetails = ({ cartDetails }) => {
                 style ={{backgroundColor:'#a8729a',borderBottomLeftRadius:'10px',borderBottomRightRadius:'10px'}}
               >
               <h5 class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0">Total
-                  <span class="h2 mb-0 ms-2 mx-2"> ${cart.cart_total}</span></h5>
+                  <span class="h2 mb-0 ms-2 mx-2"> &#x20a8; {cart.cart_total}</span></h5>
             </div>
           </div>
         </div>

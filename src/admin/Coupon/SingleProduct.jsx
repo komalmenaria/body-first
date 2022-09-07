@@ -20,7 +20,7 @@ const SingleProduct = ({item}) => {
           <p class="text-muted mb-0 small">Qty: {item.qty}</p>
         </div>
         <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
-          <p class="text-muted mb-0 small">${item.rate}</p>
+          <p class="text-muted mb-0 small">&#x20a8;  {item.rate}</p>
         </div>
       </div>
       <hr class="mb-4" 

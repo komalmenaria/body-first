@@ -25,7 +25,7 @@ const Coupon = () => {
 
   }
   return (
-    <div className="row my-2">
+    <div className="container d-flex my-4">
       <div className="col-6">
         <form class="row g-3 mx-2"  id="couponFrom" onSubmit={getCouponDetails}>
  

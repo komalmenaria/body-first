@@ -49,7 +49,7 @@ const Questions = () => {
                   ID
                 </th>
                 <th className="table-cell-padding-x px-5" scope="col">
-                  question 
+                  Question 
                 </th>
                 <th className="table-cell-padding-x px-5" scope="col">
                   Status
