@@ -15,6 +15,7 @@ import { Route, Routes } from "react-router-dom";
 // import Openproduct from "./Openproduct";
 import Dashboard from "../admin/Login/Dashboard";
 import Login from "../admin/Login/Login";
+import Coupon from "../admin/Coupon/Coupon";
 import Subcategories from "../admin/Subcategory/Subcategories";
 import Questions from "../admin/Questions/Questions";
 import Categories from "../admin/Category/Categories";
@@ -151,7 +152,7 @@ function Main() {
         />
 
 
-        {/* admin panel routes  */}        
+        {/* admin panel routes  */}
         <Route
           exact
           path="/admin/product"
@@ -181,6 +182,12 @@ function Main() {
           exact
           path="/admin/dashboard"
           element={<Dashboard />}
+        />
+
+        <Route
+          exact
+          path="/admin/coupon"
+          element={<Coupon />}
         />
 
       </Routes>
