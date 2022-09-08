@@ -117,22 +117,8 @@ const AddSubcategory = ({getallsubcategories}) => {
                       }}
                     />
                   </div>
-                  <div className="col-12">
-                    <label htmlFor="inputAddress2" className="form-label">
-                      Subcategory Description
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      name='subcat_desc'
-                      id="inputAddress2"
-                      required
-                      onChange={(e) => {
-                        setsubcatdesc(e.target.value);
-                      }}
-                    />
-                  </div>
-                  <div className="col-md-6">
+ 
+                  <div className="col-md-12">
                     <label htmlFor="inputCity" className="form-label">
                     Subcategory Icon
                     </label>
@@ -146,48 +132,7 @@ const AddSubcategory = ({getallsubcategories}) => {
                       onChange={handleIcon}
                     />
                   </div>
-                  <div className="col-md-6">
-                    <label htmlFor="inputCity" className="form-label">
-                    Subcategory Product
-                    </label>
-                    <input
-                      type="file"
-                      className="form-control"
-                      name='product_img'
-                      required
-                      id="inputCity"
-                      accept="image/*"
-                      onChange={handleProduct}
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="inputCity" className="form-label">
-                    Subcategory Poster
-                    </label>
-                    <input
-                      type="file"
-                      className="form-control"
-                      id="inputCity"
-                      required
-                      name='poster_img'
-                      accept="image/*"
-                      onChange={handlePoster}
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="inputCity" className="form-label">
-                    Subcategory Promo
-                    </label>
-                    <input
-                      type="file"
-                      className="form-control"
-                      name='promo_img'
-                      id="inputCity"
-                      required
-                      accept="image/*"
-                      onChange={handlePromo}
-                    />
-                  </div>
+ 
                   <div className="modal-footer">
                 <button
                   type="button"
