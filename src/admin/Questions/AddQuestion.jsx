@@ -48,7 +48,7 @@ const AddQuestion = ({getAllQuestion}) => {
   };
   async function getAllCategory() {
     return new Promise(async (resolve, reject) => {
-      let data = await axios.get(`${Config.BASE_URL}category`);
+      let data = await axios.get(`${Config.BASE_URL}category?is_active=1`);
       console.log(data);
       setCatgeoryList(data.data.data);
       resolve(data);
@@ -56,7 +56,7 @@ const AddQuestion = ({getAllQuestion}) => {
   }
   async function getAllSubCategory() {
     return new Promise(async (resolve, reject) => {
-      let data = await axios.get(`${Config.BASE_URL}subcat`);
+      let data = await axios.get(`${Config.BASE_URL}subcat?is_active=1`);
       console.log(data);
       setSubCatgeoryList(data.data.data);
       resolve(data);
@@ -64,7 +64,7 @@ const AddQuestion = ({getAllQuestion}) => {
   }
   async function getAllProduct() {
     return new Promise(async (resolve, reject) => {
-      let data = await axios.get(`${Config.BASE_URL}product`);
+      let data = await axios.get(`${Config.BASE_URL}product?is_active=1`);
       console.log(data);
       setproductList(data.data.data);
       resolve(data);
