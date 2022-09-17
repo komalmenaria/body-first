@@ -42,14 +42,19 @@ function Catdesc() {
 
   async function handleClick() {
     try {
-      if (cat_id) {
-        await dispatch(getQuestions({cat_id,title:catObj.cat_name}))
-      }
-      if (subcat_id) {
+      if (cat_id && subcat_id) {
         await dispatch(getQuestions({subcat_id,title:subcatObj.subcat_name}))
+        navigate("/form");
+        return
         
       }
-      navigate("/form");
+      if (cat_id) {
+        await dispatch(getQuestions({cat_id,title:catObj.cat_name}))
+        navigate("/form");
+        return
+      }
+ 
+     
     } catch (error) {
       console.log(error)
       alert(error.message)

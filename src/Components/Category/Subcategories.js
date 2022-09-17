@@ -27,6 +27,7 @@ function Subcategories() {
                 <Subcategory
                   key={index}
                   subcat ={item}
+                  cat_id={cat_id}
                   
                 />
               );
