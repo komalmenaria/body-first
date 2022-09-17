@@ -10,7 +10,7 @@ const Details = ({ subcategory, changestatus }) => {
               <h5 className="card-text">Subcategory Icon</h5>
               <img src={subcategory.subcat_img} className="card-img-top img-fluid img-thumbnail" alt={subcategory.subcat_name} />
             </div>
-            <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
+            {/* <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
               <h5 className="card-text">Product Image</h5>
               <img src={subcategory.product_img} className="card-img-top img-fluid img-thumbnail" alt={subcategory.subcat_name} />
             </div>
@@ -21,7 +21,7 @@ const Details = ({ subcategory, changestatus }) => {
             <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
               <h5 className="card-text">Promo Image</h5>
               <img src={subcategory.promo_img} className="card-img-top img-fluid img-thumbnail" alt={subcategory.subcat_name} />
-            </div>
+            </div> */}
           </div>
           <div className="card-body">
             <h5 className="card-title text-center ">Name : {subcategory.subcat_name}</h5>
