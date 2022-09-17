@@ -4,7 +4,7 @@ const Details = ({ category, changestatus }) => {
   return (
     <div>
       <>
-        <div className="card position-fixed mx-5 my-2 px-3 ">
+        <div className="card  mx-5 my-2 px-3 ">
           <div className="container d-flex justify-content-center  align-items-start">
             <div className=" d-flex flex-column px-3 py-3 justify-content-center text-center">
               <h5 className="card-text">Category Icon</h5>

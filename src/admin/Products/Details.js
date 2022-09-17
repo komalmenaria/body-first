@@ -6,7 +6,7 @@ function Details({product , changestatus}) {
    
 
         <>   
-<div className="card position-fixed mx-5 my-2  " style={{width:"18rem"}}>
+<div className="card  mx-5 my-2  " style={{width:"18rem"}}>
   <img src={product.product_img} className="card-img-top img-fluid img-thumbnail" alt={product.product_name} />
   <div className="card-body">
     <h5 className="card-title text-center fw-bold fs-4">{product.product_name}</h5>

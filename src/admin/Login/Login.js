@@ -56,7 +56,7 @@ const Login = () => {
               <label className="form-label">Password</label>
               <input type="password" className="form-control" required onChange={(e) => setpin(e.target.value)} />
             </div>
-            <button onClick={handleClickLogin} type="submit" className="btn btn-primary">Submit</button>
+            <button onClick={handleClickLogin} type="submit" className="btn btn-success">Submit</button>
           </form>
         </div>
       </>
